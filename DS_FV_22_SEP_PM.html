@@ -38,7 +38,7 @@ font-family: 'Noto Sans Myanmar', sans-serif;
 }
 
 .active-tab {
-background-color: #4f46e5;
+background-color: #1a3a6e;
 color: white;
 }
 
@@ -169,40 +169,8 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-outline: 3px solid #4f46e5;
+outline: 3px solid #1a3a6e;
 outline-offset: 2px;
-}
-
-/* Company header styling */
-.company-header {
-background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-color: white;
-padding: 1rem;
-border-radius: 0.5rem;
-margin-bottom: 1.5rem;
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-
-.company-info {
-display: flex;
-align-items: center;
-gap: 1rem;
-}
-
-.company-logo {
-width: 60px;
-height: 60px;
-border-radius: 8px;
-object-fit: contain;
-background: white;
-padding: 4px;
-}
-
-.company-name {
-font-size: 1.5rem;
-font-weight: bold;
 }
 
 /* Improved responsive design */
@@ -340,37 +308,37 @@ Settings
 <header class="w-full bg-white shadow-lg z-10">
 <!-- Desktop Navigation -->
 <nav class="desktop-nav flex justify-center space-x-1 p-2" aria-label="Main navigation">
-<button id="dashboardTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200 active-tab" aria-current="page">
+<button id="dashboardTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200 active-tab" aria-current="page" data-lang-key="dashboard">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.5a9.5 9.5 0 0115.3-7.5l-3.2 3.2m-12 0l3.2-3.2m-3.2 3.2a9.5 9.5 0 0115.3 7.5l-3.2-3.2M7.2 12.8a.8.8 0 100-1.6.8.8 0 000 1.6z" />
 </svg>
 Dashboard
 </button>
-<button id="productsTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200">
+<button id="productsTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200" data-lang-key="products">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
 </svg>
 Products
 </button>
-<button id="salesTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200">
+<button id="salesTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200" data-lang-key="sales">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5h.007m-7.5 0h.007m7.5 0a.75.75 0 110 1.5.75.75 0 010-1.5zM12 12.75a.75.75 0 110 1.5.75.75 0 010-1.5zM4.5 18a.75.75 0 110 1.5.75.75 0 010-1.5z" />
 </svg>
 Sales
 </button>
-<button id="suppliersTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200">
+<button id="suppliersTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200" data-lang-key="suppliers">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4m18-6H3l9-9m0 18v-12" />
 </svg>
 Suppliers
 </button>
-<button id="expensesTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200">
+<button id="expensesTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200" data-lang-key="expenses">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
 Expenses
 </button>
-<button id="customersTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200">
+<button id="customersTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200" data-lang-key="customers">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h-2.25a.75.75 0 000 1.5H15V9z" />
 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9h2.25a.75.75 0 000 1.5H8.25V9z" />
@@ -381,13 +349,13 @@ Expenses
 </svg>
 Customers
 </button>
-<button id="reportsTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200">
+<button id="reportsTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200" data-lang-key="reports">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" d="M10 20.5v-10h4v10M10 14.5v-4h4v4M10 18.5v-4h4v4" />
 </svg>
 Reports
 </button>
-<button id="settingsTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200">
+<button id="settingsTab" class="flex items-center px-4 py-3 text-sm font-medium rounded-t-lg hover:bg-gray-200 transition-colors duration-200" data-lang-key="settings">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 mr-2" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6a6 6 0 100 12 6 6 0 000-12z" />
 </svg>
@@ -421,13 +389,12 @@ Settings
 <main id="main-content" class="main-content flex-grow w-full max-w-7xl mx-auto bg-gray-50 p-4 md:p-6 shadow-inner relative overflow-y-auto">
 <!-- Dashboard View -->
 <div id="dashboardView" class="view" aria-labelledby="dashboard-heading">
-<!-- Company Header -->
-<div class="company-header">
-<div class="company-info">
-<img id="dashboardCompanyLogo" class="company-logo" src="" alt="Company Logo">
-<h1 id="dashboardCompanyName" class="company-name">Swift POS</h1>
-</div>
-<div class="current-date" id="currentDate"></div>
+<!-- Permanent Header -->
+<div class="w-full bg-white shadow-md flex items-center justify-between p-2">
+    <div class="flex items-center">
+        <img src="https://i.imgur.com/bSIz7z5.png" alt="Swift POS Logo" class="h-12 mr-4">
+    </div>
+    <div class="current-date" id="currentDate"></div>
 </div>
 
 <h2 id="dashboard-heading" class="text-3xl font-bold text-gray-900 mb-6">Dashboard</h2>
@@ -469,6 +436,17 @@ Settings
 <h3 class="text-lg font-semibold text-gray-800 mb-4">Sales by Category</h3>
 <canvas id="salesByCategoryChart" aria-label="Sales by category chart" role="img"></canvas>
 </div>
+</div>
+<!-- New Charts Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+    <div class="bg-white rounded-lg p-6 shadow-md">
+        <h3 class="text-lg font-semibold text-gray-800 mb-4">Monthly Revenue vs. Profit & Expense %</h3>
+        <canvas id="monthlyFinancialsChart" aria-label="Monthly revenue, and profit and expense percentages chart" role="img"></canvas>
+    </div>
+    <div class="bg-white rounded-lg p-6 shadow-md">
+        <h3 class="text-lg font-semibold text-gray-800 mb-4">Monthly Expenses by Category</h3>
+        <canvas id="monthlyExpensesByCategoryChart" aria-label="Monthly expenses by category chart" role="img"></canvas>
+    </div>
 </div>
 <!-- Additional Analytics Section -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -542,7 +520,7 @@ Settings
 				<option value="">Select Category</option>
 			</select>
 			<input type="text" id="newCategoryInput" placeholder="New category" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-			<button type="button" id="addCategoryButton" class="bg-indigo-600 text-white px-4 rounded-lg">Add</button>
+			<button type="button" id="addCategoryButton" class="bg-blue-900 text-white px-4 rounded-lg">Add</button>
 		</div>
 </div>
 <div class="flex flex-col">
@@ -576,7 +554,7 @@ Settings
 <input type="text" id="productBarcode" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
 </div>
 <div class="flex items-end col-span-1 md:col-span-2 lg:col-span-3 space-x-4">
-<button type="submit" class="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition-colors duration-200">Save Product</button>
+<button type="submit" class="bg-blue-900 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-800 transition-colors duration-200">Save Product</button>
 <button type="button" id="productClearBtn" class="bg-gray-300 text-gray-800 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-gray-400 transition-colors duration-200">Clear Form</button>
 </div>
 </form>
@@ -586,8 +564,8 @@ Settings
 <h3 class="text-xl font-semibold text-gray-800">Product List</h3>
 <div class="flex space-x-2 w-full md:w-auto">
 <label for="productSearch" class="sr-only">Search products</label>
-<input type="text" id="productSearch" placeholder="Search products..." class="w-full md:w-64 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-<button id="productSearchButton" class="bg-indigo-500 text-white p-2 rounded-lg hover:bg-indigo-600 transition-colors duration-200" aria-label="Search products">
+<input type="text" id="productSearch" placeholder="Search products..." class="w-full md:w-64 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800">
+<button id="productSearchButton" class="bg-blue-900 text-white p-2 rounded-lg hover:bg-blue-800 transition-colors duration-200" aria-label="Search products">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
 </svg>
@@ -767,7 +745,7 @@ Settings
 <textarea id="supplierAddress" rows="3" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
 </div>
 <div class="flex items-end col-span-1 md:col-span-2 space-x-4">
-<button type="submit" class="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition-colors duration-200">Save Supplier</button>
+<button type="submit" class="bg-blue-900 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-800 transition-colors duration-200">Save Supplier</button>
 <button type="button" id="supplierClearBtn" class="bg-gray-300 text-gray-800 font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-gray-400 transition-colors duration-200">Clear Form</button>
 </div>
 </form>
@@ -778,7 +756,7 @@ Settings
 <div class="flex space-x-2 w-full md:w-auto">
 <label for="supplierSearch" class="sr-only">Search suppliers</label>
 <input type="text" id="supplierSearch" placeholder="Search suppliers..." class="w-full md:w-64 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-<button id="supplierSearchButton" class="bg-indigo-500 text-white p-2 rounded-lg hover:bg-indigo-600 transition-colors duration-200" aria-label="Search suppliers">
+<button id="supplierSearchButton" class="bg-blue-900 text-white p-2 rounded-lg hover:bg-blue-800 transition-colors duration-200" aria-label="Search suppliers">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6" aria-hidden="true">
 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
 </svg>
@@ -1101,6 +1079,13 @@ Settings
 <h3 class="text-xl font-semibold text-gray-800 mb-4">System Settings</h3>
 <form id="systemForm" class="space-y-4">
 <div class="flex flex-col">
+<label for="language" class="text-sm font-medium text-gray-700 mb-1">Language</label>
+<select id="language" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800">
+<option value="en">English</option>
+<option value="my">Burmese (မြန်မာ)</option>
+</select>
+</div>
+<div class="flex flex-col">
 <label for="currency" class="text-sm font-medium text-gray-700 mb-1">Currency</label>
 <select id="currency" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
 <option value="MMK">Myanmar Kyat (MMK)</option>
@@ -1162,882 +1147,813 @@ Settings
 <p>&copy; 2023 Swift POS. All rights reserved.</p>
 </footer>
 
+<!-- PWA Install Button -->
+<div id="installContainer" class="fixed bottom-4 right-4 z-50">
+    <button id="installButton" class="hidden bg-blue-900 text-white font-bold py-2 px-4 rounded-lg shadow-lg hover:bg-blue-800 transition-transform transform hover:scale-105">
+        Install App
+    </button>
+</div>
+
 <!-- Toast Notifications -->
 <div id="toastContainer" class="fixed top-4 right-4 z-50 space-y-2"></div>
 
 <script>
+/**
+ * @file Main application logic for the Swift POS system.
+ * This file handles UI interactions, data management, and business logic.
+ * @author Jules
+ */
+
 // ===========================
 // APP INITIALIZATION
 // ===========================
 
-// DOM Elements
+/**
+ * An object containing references to all the main view elements in the DOM.
+ * @type {Object<string, HTMLElement>}
+ */
 const views = {
-dashboard: document.getElementById('dashboardView'),
-products: document.getElementById('productsView'),
-sales: document.getElementById('salesView'),
-suppliers: document.getElementById('suppliersView'),
-expenses: document.getElementById('expensesView'),
-customers: document.getElementById('customersView'),
-reports: document.getElementById('reportsView'),
-settings: document.getElementById('settingsView')
+    dashboard: document.getElementById('dashboardView'),
+    products: document.getElementById('productsView'),
+    sales: document.getElementById('salesView'),
+    suppliers: document.getElementById('suppliersView'),
+    expenses: document.getElementById('expensesView'),
+    customers: document.getElementById('customersView'),
+    reports: document.getElementById('reportsView'),
+    settings: document.getElementById('settingsView')
 };
 
-// Tab buttons
+/**
+ * An object containing references to all the main tab button elements.
+ * @type {Object<string, HTMLElement>}
+ */
 const tabButtons = {
-dashboard: document.getElementById('dashboardTab'),
-products: document.getElementById('productsTab'),
-sales: document.getElementById('salesTab'),
-suppliers: document.getElementById('suppliersTab'),
-expenses: document.getElementById('expensesTab'),
-customers: document.getElementById('customersTab'),
-reports: document.getElementById('reportsTab'),
-settings: document.getElementById('settingsTab')
+    dashboard: document.getElementById('dashboardTab'),
+    products: document.getElementById('productsTab'),
+    sales: document.getElementById('salesTab'),
+    suppliers: document.getElementById('suppliersTab'),
+    expenses: document.getElementById('expensesTab'),
+    customers: document.getElementById('customersTab'),
+    reports: document.getElementById('reportsTab'),
+    settings: document.getElementById('settingsTab')
 };
 
-// Mobile navigation
+// Mobile navigation elements
 const mobileNavSelect = document.getElementById('mobileNavSelect');
 const mobileMenuButton = document.getElementById('mobileMenuButton');
 const closeSidebar = document.getElementById('closeSidebar');
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
 
-// Charts
-let salesChart, monthlyProfitChart, bestSellingProductsChart, salesByCategoryChart;
+/**
+ * Chart.js chart instances.
+ * @type {Chart}
+ */
+let salesChart, monthlyProfitChart, bestSellingProductsChart, salesByCategoryChart, monthlyFinancialsChart, monthlyExpensesByCategoryChart;
 
 // ===========================
 // DATA MANAGEMENT
 // ===========================
 
-// Initialize data storage
+/**
+ * Initializes the local storage with default empty arrays for data if they don't exist.
+ */
 function initializeData() {
-if (!localStorage.getItem('products')) {
-localStorage.setItem('products', JSON.stringify([]));
-}
-if (!localStorage.getItem('sales')) {
-localStorage.setItem('sales', JSON.stringify([]));
-}
-if (!localStorage.getItem('suppliers')) {
-localStorage.setItem('suppliers', JSON.stringify([]));
-}
-if (!localStorage.getItem('expenses')) {
-localStorage.setItem('expenses', JSON.stringify([]));
-}
-if (!localStorage.getItem('customers')) {
-localStorage.setItem('customers', JSON.stringify([]));
-}
-if (!localStorage.getItem('companyInfo')) {
-localStorage.setItem('companyInfo', JSON.stringify({
-name: 'Swift POS',
-logo: '',
-address: '',
-phone: ''
-}));
-}
-		if (!localStorage.getItem('systemSettings')) {
-localStorage.setItem('systemSettings', JSON.stringify({
-currency: 'MMK',
-taxRate: 0,
-enableNotifications: true,
-				enableSound: true,
-				storagePreference: { type: 'local', path: '' }
-}));
-}
-		if (!localStorage.getItem('categories')) {
-			localStorage.setItem('categories', JSON.stringify(['Tops','Dresses','Pants','Shoes','Accessories']));
-		}
+    if (!localStorage.getItem('products')) localStorage.setItem('products', JSON.stringify([]));
+    if (!localStorage.getItem('sales')) localStorage.setItem('sales', JSON.stringify([]));
+    if (!localStorage.getItem('suppliers')) localStorage.setItem('suppliers', JSON.stringify([]));
+    if (!localStorage.getItem('expenses')) localStorage.setItem('expenses', JSON.stringify([]));
+    if (!localStorage.getItem('customers')) localStorage.setItem('customers', JSON.stringify([]));
+    if (!localStorage.getItem('companyInfo')) localStorage.setItem('companyInfo', JSON.stringify({ name: 'Swift POS', logo: '', address: '', phone: '' }));
+    if (!localStorage.getItem('systemSettings')) localStorage.setItem('systemSettings', JSON.stringify({ currency: 'MMK', taxRate: 0, enableNotifications: true, enableSound: true, storagePreference: { type: 'local', path: '' } }));
+    if (!localStorage.getItem('categories')) localStorage.setItem('categories', JSON.stringify(['Tops', 'Dresses', 'Pants', 'Shoes', 'Accessories']));
 }
 
-// Data retrieval functions
+/**
+ * Retrieves products from local storage.
+ * @returns {Array<Object>} An array of product objects.
+ */
 function getProducts() {
-return JSON.parse(localStorage.getItem('products')) || [];
+    return JSON.parse(localStorage.getItem('products')) || [];
 }
 
+/**
+ * Retrieves sales from local storage.
+ * @returns {Array<Object>} An array of sale objects.
+ */
 function getSales() {
-return JSON.parse(localStorage.getItem('sales')) || [];
+    return JSON.parse(localStorage.getItem('sales')) || [];
 }
 
+/**
+ * Retrieves suppliers from local storage.
+ * @returns {Array<Object>} An array of supplier objects.
+ */
 function getSuppliers() {
-return JSON.parse(localStorage.getItem('suppliers')) || [];
+    return JSON.parse(localStorage.getItem('suppliers')) || [];
 }
 
+/**
+ * Retrieves expenses from local storage.
+ * @returns {Array<Object>} An array of expense objects.
+ */
 function getExpenses() {
-return JSON.parse(localStorage.getItem('expenses')) || [];
+    return JSON.parse(localStorage.getItem('expenses')) || [];
 }
 
+/**
+ * Retrieves customers from local storage.
+ * @returns {Array<Object>} An array of customer objects.
+ */
 function getCustomers() {
-return JSON.parse(localStorage.getItem('customers')) || [];
+    return JSON.parse(localStorage.getItem('customers')) || [];
 }
 
+/**
+ * Retrieves company information from local storage.
+ * @returns {Object} The company information object.
+ */
 function getCompanyInfo() {
-return JSON.parse(localStorage.getItem('companyInfo')) || {};
+    return JSON.parse(localStorage.getItem('companyInfo')) || {};
 }
 
+/**
+ * Retrieves system settings from local storage.
+ * @returns {Object} The system settings object.
+ */
 function getSystemSettings() {
-return JSON.parse(localStorage.getItem('systemSettings')) || {};
+    return JSON.parse(localStorage.getItem('systemSettings')) || {};
 }
 
-	function getCategories() {
-		return JSON.parse(localStorage.getItem('categories')) || [];
-	}
+/**
+ * Retrieves product categories from local storage.
+ * @returns {Array<string>} An array of category names.
+ */
+function getCategories() {
+    return JSON.parse(localStorage.getItem('categories')) || [];
+}
 
-// Data update functions
+/**
+ * Saves an array of products to local storage.
+ * @param {Array<Object>} products The array of products to save.
+ */
 function saveProducts(products) {
-localStorage.setItem('products', JSON.stringify(products));
+    localStorage.setItem('products', JSON.stringify(products));
 }
 
+/**
+ * Saves an array of sales to local storage.
+ * @param {Array<Object>} sales The array of sales to save.
+ */
 function saveSales(sales) {
-localStorage.setItem('sales', JSON.stringify(sales));
+    localStorage.setItem('sales', JSON.stringify(sales));
 }
 
+/**
+ * Saves an array of suppliers to local storage.
+ * @param {Array<Object>} suppliers The array of suppliers to save.
+ */
 function saveSuppliers(suppliers) {
-localStorage.setItem('suppliers', JSON.stringify(suppliers));
+    localStorage.setItem('suppliers', JSON.stringify(suppliers));
 }
 
+/**
+ * Saves an array of expenses to local storage.
+ * @param {Array<Object>} expenses The array of expenses to save.
+ */
 function saveExpenses(expenses) {
-localStorage.setItem('expenses', JSON.stringify(expenses));
+    localStorage.setItem('expenses', JSON.stringify(expenses));
 }
 
+/**
+ * Saves an array of customers to local storage.
+ * @param {Array<Object>} customers The array of customers to save.
+ */
 function saveCustomers(customers) {
-localStorage.setItem('customers', JSON.stringify(customers));
+    localStorage.setItem('customers', JSON.stringify(customers));
 }
 
+/**
+ * Saves the company information object to local storage.
+ * @param {Object} info The company information object to save.
+ */
 function saveCompanyInfo(info) {
-localStorage.setItem('companyInfo', JSON.stringify(info));
+    localStorage.setItem('companyInfo', JSON.stringify(info));
 }
 
+/**
+ * Saves the system settings object to local storage.
+ * @param {Object} settings The system settings object to save.
+ */
 function saveSystemSettings(settings) {
-localStorage.setItem('systemSettings', JSON.stringify(settings));
+    localStorage.setItem('systemSettings', JSON.stringify(settings));
 }
 
-	function saveCategories(categories) {
-		localStorage.setItem('categories', JSON.stringify(categories));
-	}
+/**
+ * Saves the product categories array to local storage.
+ * @param {Array<string>} categories The array of category names to save.
+ */
+function saveCategories(categories) {
+    localStorage.setItem('categories', JSON.stringify(categories));
+}
 
 // ===========================
 // UTILITY FUNCTIONS
 // ===========================
 
-// Format currency
+/**
+ * Formats a number as a currency string based on system settings.
+ * @param {number} amount The number to format.
+ * @returns {string} The formatted currency string.
+ */
 function formatCurrency(amount) {
-const settings = getSystemSettings();
-const currency = settings.currency || 'MMK';
-const formatter = new Intl.NumberFormat('en-US', {
-style: 'currency',
-currency: currency,
-minimumFractionDigits: 0,
-maximumFractionDigits: 0
-});
-return formatter.format(amount);
+    const settings = getSystemSettings();
+    const currency = settings.currency || 'MMK';
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency,
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    });
+    return formatter.format(amount);
 }
 
-// Show toast notification
+/**
+ * Displays a toast notification message.
+ * @param {string} message The message to display.
+ * @param {('info'|'success'|'error'|'warning')} [type='info'] The type of toast notification.
+ */
 function showToast(message, type = 'info') {
-const toastContainer = document.getElementById('toastContainer');
-const toast = document.createElement('div');
-toast.className = `p-4 rounded-lg shadow-lg text-white ${
-type === 'success' ? 'bg-green-500' :
-type === 'error' ? 'bg-red-500' :
-type === 'warning' ? 'bg-yellow-500' : 'bg-blue-500'
-} transform transition-all duration-300 ease-in-out translate-x-full`;
-toast.textContent = message;
-toastContainer.appendChild(toast);
+    const toastContainer = document.getElementById('toastContainer');
+    const toast = document.createElement('div');
+    toast.className = `p-4 rounded-lg shadow-lg text-white ${
+        type === 'success' ? 'bg-green-500' :
+        type === 'error' ? 'bg-red-500' :
+        type === 'warning' ? 'bg-yellow-500' : 'bg-blue-500'
+    } transform transition-all duration-300 ease-in-out translate-x-full`;
+    toast.textContent = message;
+    toastContainer.appendChild(toast);
 
-// Animate in
-setTimeout(() => {
-toast.classList.remove('translate-x-full');
-}, 10);
+    setTimeout(() => {
+        toast.classList.remove('translate-x-full');
+    }, 10);
 
-// Remove after 3 seconds
-setTimeout(() => {
-toast.classList.add('translate-x-full');
-setTimeout(() => {
-toastContainer.removeChild(toast);
-}, 300);
-}, 3000);
+    setTimeout(() => {
+        toast.classList.add('translate-x-full');
+        setTimeout(() => {
+            toastContainer.removeChild(toast);
+        }, 300);
+    }, 3000);
 }
 
-// Generate unique ID
+/**
+ * Generates a simple unique ID.
+ * @returns {string} A unique ID string.
+ */
 function generateId() {
-return Date.now().toString(36) + Math.random().toString(36).substr(2);
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
 }
 
-// Validate email
+/**
+ * Validates an email address format.
+ * @param {string} email The email to validate.
+ * @returns {boolean} True if the email format is valid, false otherwise.
+ */
 function isValidEmail(email) {
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-return emailRegex.test(email);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
 }
 
-// Validate phone number
+/**
+ * Validates a phone number format.
+ * @param {string} phone The phone number to validate.
+ * @returns {boolean} True if the phone number format is valid, false otherwise.
+ */
 function isValidPhone(phone) {
-const phoneRegex = /^\+?[\d\s-()]{10,}$/;
-return phoneRegex.test(phone);
+    const phoneRegex = /^\+?[\d\s-()]{10,}$/;
+    return phoneRegex.test(phone);
 }
 
 // ===========================
 // VIEW MANAGEMENT
 // ===========================
 
-// Show a specific view
+/**
+ * Shows a specific view and hides all others. Also triggers data loading for the view.
+ * @param {string} viewName The name of the view to show (e.g., 'dashboard', 'products').
+ */
 function showView(viewName) {
-// Hide all views
-Object.values(views).forEach(view => {
-view.classList.add('hidden');
-});
+    Object.values(views).forEach(view => view.classList.add('hidden'));
+    views[viewName].classList.remove('hidden');
 
-// Show the selected view
-views[viewName].classList.remove('hidden');
+    Object.values(tabButtons).forEach(button => button.classList.remove('active-tab'));
+    tabButtons[viewName].classList.add('active-tab');
 
-// Update active tab
-Object.values(tabButtons).forEach(button => {
-button.classList.remove('active-tab');
-});
-tabButtons[viewName].classList.add('active-tab');
+    mobileNavSelect.value = viewName;
+    sidebar.classList.remove('open');
+    overlay.classList.remove('open');
 
-// Update mobile nav select
-mobileNavSelect.value = viewName;
-
-// Close mobile sidebar if open
-sidebar.classList.remove('open');
-overlay.classList.remove('open');
-
-// Load view-specific data
-switch (viewName) {
-case 'dashboard':
-loadDashboardData();
-break;
-case 'products':
-loadProducts();
-		loadSuppliersForProducts();
-		attachCategoryAddHandler();
-break;
-case 'sales':
-loadProductsForSales();
-loadCustomersForSales();
-break;
-case 'suppliers':
-		loadSuppliers();
-		initializeSupplierPaymentsUI();
-break;
-case 'expenses':
-loadExpenses();
-break;
-case 'customers':
-loadCustomers();
-break;
-case 'reports':
-loadReports();
-break;
-case 'settings':
-loadSettings();
-break;
-}
+    switch (viewName) {
+        case 'dashboard':
+            loadDashboardData();
+            break;
+        case 'products':
+            loadProducts();
+            loadSuppliersForProducts();
+            attachCategoryAddHandler();
+            break;
+        case 'sales':
+            loadProductsForSales();
+            loadCustomersForSales();
+            break;
+        case 'suppliers':
+            loadSuppliers();
+            initializeSupplierPaymentsUI();
+            break;
+        case 'expenses':
+            loadExpenses();
+            break;
+        case 'customers':
+            loadCustomers();
+            break;
+        case 'reports':
+            loadReports();
+            break;
+        case 'settings':
+            loadSettings();
+            break;
+    }
 }
 
 // ===========================
 // DASHBOARD FUNCTIONALITY
 // ===========================
 
+/**
+ * Loads all data and updates the dashboard view.
+ */
 function loadDashboardData() {
-const sales = getSales();
-const products = getProducts();
-const expenses = getExpenses();
-const companyInfo = getCompanyInfo();
+    const sales = getSales();
+    const products = getProducts();
+    const expenses = getExpenses();
+    const companyInfo = getCompanyInfo();
 
-// Update company info
-document.getElementById('dashboardCompanyName').textContent = companyInfo.name || 'Swift POS';
-document.getElementById('dashboardCompanyLogo').src = companyInfo.logo || '';
 
-// Update current date
-const now = new Date();
-document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', {
-weekday: 'long',
-year: 'numeric',
-month: 'long',
-day: 'numeric'
-});
+    const now = new Date();
+    document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
 
-// Calculate totals
-const totalSales = sales.reduce((sum, sale) => sum + sale.total, 0);
-const totalProfit = sales.reduce((sum, sale) => sum + sale.profit, 0);
-const totalProducts = products.length;
-const totalCreditPayments = expenses.filter(expense => expense.category === 'Credit Payment').reduce((sum, expense) => sum + expense.amount, 0);
+    const totalSales = sales.reduce((sum, sale) => sum + sale.total, 0);
+    const totalProfit = sales.reduce((sum, sale) => sum + sale.profit, 0);
+    const totalProducts = products.length;
+    const totalCreditPayments = expenses.filter(expense => expense.category === 'Credit Payment').reduce((sum, expense) => sum + expense.amount, 0);
 
-// Update dashboard cards
-document.getElementById('totalSales').textContent = formatCurrency(totalSales);
-document.getElementById('totalProfit').textContent = formatCurrency(totalProfit);
-document.getElementById('totalProducts').textContent = totalProducts;
-document.getElementById('totalCreditPayments').textContent = formatCurrency(totalCreditPayments);
+    document.getElementById('totalSales').textContent = formatCurrency(totalSales);
+    document.getElementById('totalProfit').textContent = formatCurrency(totalProfit);
+    document.getElementById('totalProducts').textContent = totalProducts;
+    document.getElementById('totalCreditPayments').textContent = formatCurrency(totalCreditPayments);
 
-// Update charts
-updateCharts(sales, products);
-
-// Update additional analytics
-updateAnalytics(sales, products);
-
-// Update supplier payments
-updateSupplierPayments(expenses);
+    updateCharts(sales, products, expenses);
+    updateAnalytics(sales, products);
+    updateSupplierPayments(expenses);
 }
 
-function updateCharts(sales, products) {
-// Sales trends chart (last 7 days)
-const last7Days = Array.from({ length: 7 }, (_, i) => {
-const date = new Date();
-date.setDate(date.getDate() - i);
-return date.toISOString().split('T')[0];
-}).reverse();
+/**
+ * Updates all charts on the dashboard.
+ * @param {Array<Object>} sales - Array of sale objects.
+ * @param {Array<Object>} products - Array of product objects.
+ * @param {Array<Object>} expenses - Array of expense objects.
+ */
+function updateCharts(sales, products, expenses) {
+    const currentYear = new Date().getFullYear();
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-const salesByDay = last7Days.map(date => {
-const daySales = sales.filter(sale => sale.date === date);
-return daySales.reduce((sum, sale) => sum + sale.total, 0);
-});
+    const getMonthlyTotals = (data, dateField, valueField) => {
+        return months.map((_, index) => {
+            const monthData = data.filter(item => {
+                const itemDate = new Date(item[dateField]);
+                return itemDate.getFullYear() === currentYear && itemDate.getMonth() === index;
+            });
+            return monthData.reduce((sum, item) => sum + (item[valueField] || 0), 0);
+        });
+    };
 
-const salesCtx = document.getElementById('salesChart').getContext('2d');
-if (salesChart) salesChart.destroy();
-salesChart = new Chart(salesCtx, {
-type: 'line',
-data: {
-labels: last7Days.map(date => new Date(date).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })),
-datasets: [{
-label: 'Sales',
-data: salesByDay,
-borderColor: '#4f46e5',
-backgroundColor: 'rgba(79, 70, 229, 0.1)',
-tension: 0.3,
-fill: true
-}]
-},
-options: {
-responsive: true,
-plugins: {
-legend: {
-display: false
-}
-},
-scales: {
-y: {
-beginAtZero: true,
-ticks: {
-callback: function(value) {
-return formatCurrency(value);
-}
-}
-}
-}
-}
-});
+    const getMonthlyCategoryTotals = (data, dateField, valueField, categoryField) => {
+        const categoryTotals = {};
+        data.forEach(item => {
+            const itemDate = new Date(item[dateField]);
+            if (itemDate.getFullYear() === currentYear) {
+                const category = item[categoryField] || 'Uncategorized';
+                if (!categoryTotals[category]) {
+                    categoryTotals[category] = Array(12).fill(0);
+                }
+                categoryTotals[category][itemDate.getMonth()] += item[valueField];
+            }
+        });
+        return categoryTotals;
+    };
 
-// Monthly profit chart
-const currentYear = new Date().getFullYear();
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const profitByMonth = months.map((month, index) => {
-const monthSales = sales.filter(sale => {
-const saleDate = new Date(sale.date);
-return saleDate.getFullYear() === currentYear && saleDate.getMonth() === index;
-});
-return monthSales.reduce((sum, sale) => sum + sale.profit, 0);
-});
+    const monthlyRevenue = getMonthlyTotals(sales, 'date', 'total');
+    const monthlyProfit = getMonthlyTotals(sales, 'date', 'profit');
+    const monthlyExpenses = getMonthlyTotals(expenses, 'date', 'amount');
 
-const profitCtx = document.getElementById('monthlyProfitChart').getContext('2d');
-if (monthlyProfitChart) monthlyProfitChart.destroy();
-monthlyProfitChart = new Chart(profitCtx, {
-type: 'bar',
-data: {
-labels: months,
-datasets: [{
-label: 'Profit',
-data: profitByMonth,
-backgroundColor: '#10b981',
-borderColor: '#10b981',
-borderWidth: 1
-}]
-},
-options: {
-responsive: true,
-plugins: {
-legend: {
-display: false
-}
-},
-scales: {
-y: {
-beginAtZero: true,
-ticks: {
-callback: function(value) {
-return formatCurrency(value);
-}
-}
-}
-}
-}
-});
+    const last7Days = Array.from({ length: 7 }, (_, i) => {
+        const date = new Date();
+        date.setDate(date.getDate() - i);
+        return date.toISOString().split('T')[0];
+    }).reverse();
 
-// Best selling products chart
-const productSales = {};
-sales.forEach(sale => {
-sale.items.forEach(item => {
-if (!productSales[item.productId]) {
-productSales[item.productId] = 0;
-}
-productSales[item.productId] += item.quantity;
-});
-});
+    const salesByDay = last7Days.map(date => {
+        const daySales = sales.filter(sale => sale.date === date);
+        return daySales.reduce((sum, sale) => sum + sale.total, 0);
+    });
 
-const topProducts = Object.entries(productSales)
-.map(([productId, quantity]) => {
-const product = products.find(p => p.id === productId);
-return {
-name: product ? product.name : 'Unknown Product',
-quantity: quantity
-};
-})
-.sort((a, b) => b.quantity - a.quantity)
-.slice(0, 5);
+    const salesCtx = document.getElementById('salesChart').getContext('2d');
+    if (salesChart) salesChart.destroy();
+    salesChart = new Chart(salesCtx, {
+        type: 'line',
+        data: {
+            labels: last7Days.map(date => new Date(date).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })),
+            datasets: [{
+                label: 'Sales',
+                data: salesByDay,
+                borderColor: '#4f46e5',
+                backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                tension: 0.3,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true, ticks: { callback: value => formatCurrency(value) } } }
+        }
+    });
 
-const bestSellingCtx = document.getElementById('bestSellingProductsChart').getContext('2d');
-if (bestSellingProductsChart) bestSellingProductsChart.destroy();
-bestSellingProductsChart = new Chart(bestSellingCtx, {
-type: 'doughnut',
-data: {
-labels: topProducts.map(p => p.name),
-datasets: [{
-data: topProducts.map(p => p.quantity),
-backgroundColor: [
-'#4f46e5', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'
-],
-borderWidth: 1
-}]
-},
-options: {
-responsive: true,
-plugins: {
-legend: {
-position: 'bottom'
-}
-}
-}
-});
+    const profitCtx = document.getElementById('monthlyProfitChart').getContext('2d');
+    if (monthlyProfitChart) monthlyProfitChart.destroy();
+    monthlyProfitChart = new Chart(profitCtx, {
+        type: 'bar',
+        data: {
+            labels: months,
+            datasets: [{
+                label: 'Profit',
+                data: monthlyProfit,
+                backgroundColor: '#10b981'
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true, ticks: { callback: value => formatCurrency(value) } } }
+        }
+    });
 
-// Sales by category chart
-const categorySales = {};
-sales.forEach(sale => {
-sale.items.forEach(item => {
-const product = products.find(p => p.id === item.productId);
-if (product) {
-if (!categorySales[product.category]) {
-categorySales[product.category] = 0;
-}
-categorySales[product.category] += item.total;
-}
-});
-});
+    const productSales = {};
+    sales.forEach(sale => sale.items.forEach(item => {
+        productSales[item.productId] = (productSales[item.productId] || 0) + item.quantity;
+    }));
+    const topProducts = Object.entries(productSales)
+        .map(([productId, quantity]) => ({ name: (products.find(p => p.id === productId) || { name: 'Unknown' }).name, quantity }))
+        .sort((a, b) => b.quantity - a.quantity)
+        .slice(0, 5);
 
-const categoryCtx = document.getElementById('salesByCategoryChart').getContext('2d');
-if (salesByCategoryChart) salesByCategoryChart.destroy();
-salesByCategoryChart = new Chart(categoryCtx, {
-type: 'pie',
-data: {
-labels: Object.keys(categorySales),
-datasets: [{
-data: Object.values(categorySales),
-backgroundColor: [
-'#4f46e5', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#f97316'
-],
-borderWidth: 1
-}]
-},
-options: {
-responsive: true,
-plugins: {
-legend: {
-position: 'bottom'
-}
-}
-}
-});
+    const bestSellingCtx = document.getElementById('bestSellingProductsChart').getContext('2d');
+    if (bestSellingProductsChart) bestSellingProductsChart.destroy();
+    bestSellingProductsChart = new Chart(bestSellingCtx, {
+        type: 'doughnut',
+        data: {
+            labels: topProducts.map(p => p.name),
+            datasets: [{
+                data: topProducts.map(p => p.quantity),
+                backgroundColor: ['#4f46e5', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6']
+            }]
+        },
+        options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+    });
+
+    const categorySales = {};
+    sales.forEach(sale => sale.items.forEach(item => {
+        const product = products.find(p => p.id === item.productId);
+        if (product) {
+            categorySales[product.category] = (categorySales[product.category] || 0) + item.total;
+        }
+    }));
+    const categoryCtx = document.getElementById('salesByCategoryChart').getContext('2d');
+    if (salesByCategoryChart) salesByCategoryChart.destroy();
+    salesByCategoryChart = new Chart(categoryCtx, {
+        type: 'pie',
+        data: {
+            labels: Object.keys(categorySales),
+            datasets: [{
+                data: Object.values(categorySales),
+                backgroundColor: ['#4f46e5', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#f97316']
+            }]
+        },
+        options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+    });
+
+    const profitPercentage = monthlyRevenue.map((rev, i) => rev > 0 ? (monthlyProfit[i] / rev) * 100 : 0);
+    const expensePercentage = monthlyRevenue.map((rev, i) => rev > 0 ? (monthlyExpenses[i] / rev) * 100 : 0);
+
+    const financialsCtx = document.getElementById('monthlyFinancialsChart').getContext('2d');
+    if (monthlyFinancialsChart) monthlyFinancialsChart.destroy();
+    monthlyFinancialsChart = new Chart(financialsCtx, {
+        type: 'bar',
+        data: {
+            labels: months,
+            datasets: [
+                {
+                    label: 'Revenue',
+                    data: monthlyRevenue,
+                    backgroundColor: '#3b82f6',
+                    yAxisID: 'yAmount',
+                    order: 1
+                },
+                {
+                    label: 'Profit %',
+                    data: profitPercentage,
+                    backgroundColor: '#22c55e',
+                    yAxisID: 'yPercentage',
+                    type: 'line',
+                    order: 0
+                },
+                {
+                    label: 'Expense %',
+                    data: expensePercentage,
+                    backgroundColor: '#ef4444',
+                    borderColor: '#ef4444',
+                    yAxisID: 'yPercentage',
+                    type: 'line',
+                    order: 0
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            interaction: { mode: 'index', intersect: false },
+            scales: {
+                yAmount: {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    title: { display: true, text: 'Revenue' },
+                    ticks: { callback: value => formatCurrency(value) }
+                },
+                yPercentage: {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    min: 0,
+                    max: 100,
+                    title: { display: true, text: 'Percentage' },
+                    ticks: { callback: value => `${value}%` },
+                    grid: { drawOnChartArea: false }
+                }
+            },
+            plugins: { legend: { position: 'top' } }
+        }
+    });
+
+    const monthlyExpensesByCategory = getMonthlyCategoryTotals(expenses, 'date', 'amount', 'category');
+    const expenseCategoryCtx = document.getElementById('monthlyExpensesByCategoryChart').getContext('2d');
+    if (monthlyExpensesByCategoryChart) monthlyExpensesByCategoryChart.destroy();
+    monthlyExpensesByCategoryChart = new Chart(expenseCategoryCtx, {
+        type: 'line',
+        data: {
+            labels: months,
+            datasets: Object.entries(monthlyExpensesByCategory).map(([category, data], index) => {
+                const colors = ['#ef4444', '#f97316', '#f59e0b', '#eab308', '#84cc16', '#22c55e', '#10b981'];
+                return {
+                    label: category,
+                    data: data,
+                    borderColor: colors[index % colors.length],
+                    backgroundColor: colors[index % colors.length] + '33',
+                    fill: false,
+                    tension: 0.1
+                };
+            })
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { position: 'top' } },
+            scales: { y: { beginAtZero: true, ticks: { callback: value => formatCurrency(value) } } }
+        }
+    });
 }
 
+/**
+ * Updates the additional analytics sections on the dashboard, including top selling,
+ * low stock, and least selling items.
+ * @param {Array<Object>} sales - The array of sale objects.
+ * @param {Array<Object>} products - The array of product objects.
+ */
 function updateAnalytics(sales, products) {
-// Top 10 selling items
-const productSales = {};
-sales.forEach(sale => {
-sale.items.forEach(item => {
-if (!productSales[item.productId]) {
-productSales[item.productId] = {
-quantity: 0,
-revenue: 0
-};
-}
-productSales[item.productId].quantity += item.quantity;
-productSales[item.productId].revenue += item.total;
-});
-});
+    const productSales = {};
+    sales.forEach(sale => {
+        sale.items.forEach(item => {
+            if (!productSales[item.productId]) {
+                productSales[item.productId] = { quantity: 0, revenue: 0 };
+            }
+            productSales[item.productId].quantity += item.quantity;
+            productSales[item.productId].revenue += item.total;
+        });
+    });
 
-const topSellingItems = Object.entries(productSales)
-.map(([productId, data]) => {
-const product = products.find(p => p.id === productId);
-return {
-name: product ? product.name : 'Unknown Product',
-quantity: data.quantity,
-revenue: data.revenue
-};
-})
-.sort((a, b) => b.quantity - a.quantity)
-.slice(0, 10);
+    const topSellingItems = Object.entries(productSales)
+        .map(([productId, data]) => ({ name: (products.find(p => p.id === productId) || { name: 'Unknown' }).name, ...data }))
+        .sort((a, b) => b.quantity - a.quantity)
+        .slice(0, 10);
 
-const topSellingContainer = document.getElementById('topSellingItems');
-if (topSellingItems.length > 0) {
-topSellingContainer.innerHTML = topSellingItems.map((item, index) => `
-<div class="flex justify-between items-center p-2 bg-gray-50 rounded">
-<span class="text-sm font-medium">${index + 1}. ${item.name}</span>
-<span class="text-xs text-gray-600">${item.quantity} sold</span>
-</div>
-`).join('');
-} else {
-topSellingContainer.innerHTML = '<p class="text-gray-500 text-center">No sales data available</p>';
-}
+    const topSellingContainer = document.getElementById('topSellingItems');
+    if (topSellingItems.length > 0) {
+        topSellingContainer.innerHTML = topSellingItems.map((item, index) => `
+            <div class="flex justify-between items-center p-2 bg-gray-50 rounded">
+                <span class="text-sm font-medium">${index + 1}. ${item.name}</span>
+                <span class="text-xs text-gray-600">${item.quantity} sold</span>
+            </div>`).join('');
+    } else {
+        topSellingContainer.innerHTML = '<p class="text-gray-500 text-center">No sales data available</p>';
+    }
 
-// Low stock items
-const lowStockItems = products.filter(product => product.stock < 10)
-.sort((a, b) => a.stock - b.stock)
-.slice(0, 10);
+    const lowStockItems = products.filter(product => product.stock < 10)
+        .sort((a, b) => a.stock - b.stock)
+        .slice(0, 10);
 
-const lowStockContainer = document.getElementById('lowStockItems');
-if (lowStockItems.length > 0) {
-lowStockContainer.innerHTML = lowStockItems.map(item => `
-<div class="flex justify-between items-center p-2 bg-red-50 rounded">
-<span class="text-sm font-medium">${item.name}</span>
-<span class="text-xs text-red-600">${item.stock} left</span>
-</div>
-`).join('');
-} else {
-lowStockContainer.innerHTML = '<p class="text-gray-500 text-center">No low stock items</p>';
-}
+    const lowStockContainer = document.getElementById('lowStockItems');
+    if (lowStockItems.length > 0) {
+        lowStockContainer.innerHTML = lowStockItems.map(item => `
+            <div class="flex justify-between items-center p-2 bg-red-50 rounded">
+                <span class="text-sm font-medium">${item.name}</span>
+                <span class="text-xs text-red-600">${item.stock} left</span>
+            </div>`).join('');
+    } else {
+        lowStockContainer.innerHTML = '<p class="text-gray-500 text-center">No low stock items</p>';
+    }
 
-// Least selling items
-const leastSellingItems = Object.entries(productSales)
-.map(([productId, data]) => {
-const product = products.find(p => p.id === productId);
-return {
-name: product ? product.name : 'Unknown Product',
-quantity: data.quantity,
-revenue: data.revenue
-};
-})
-.filter(item => item.quantity > 0) // Only include items that have been sold
-.sort((a, b) => a.quantity - b.quantity)
-.slice(0, 10);
+    const leastSellingItems = Object.entries(productSales)
+        .map(([productId, data]) => ({ name: (products.find(p => p.id === productId) || { name: 'Unknown' }).name, ...data }))
+        .filter(item => item.quantity > 0)
+        .sort((a, b) => a.quantity - b.quantity)
+        .slice(0, 10);
 
-const leastSellingContainer = document.getElementById('leastSellingItems');
-if (leastSellingItems.length > 0) {
-leastSellingContainer.innerHTML = leastSellingItems.map((item, index) => `
-<div class="flex justify-between items-center p-2 bg-yellow-50 rounded">
-<span class="text-sm font-medium">${index + 1}. ${item.name}</span>
-<span class="text-xs text-yellow-600">${item.quantity} sold</span>
-</div>
-`).join('');
-} else {
-leastSellingContainer.innerHTML = '<p class="text-gray-500 text-center">No sales data available</p>';
-}
+    const leastSellingContainer = document.getElementById('leastSellingItems');
+    if (leastSellingItems.length > 0) {
+        leastSellingContainer.innerHTML = leastSellingItems.map((item, index) => `
+            <div class="flex justify-between items-center p-2 bg-yellow-50 rounded">
+                <span class="text-sm font-medium">${index + 1}. ${item.name}</span>
+                <span class="text-xs text-yellow-600">${item.quantity} sold</span>
+            </div>`).join('');
+    } else {
+        leastSellingContainer.innerHTML = '<p class="text-gray-500 text-center">No sales data available</p>';
+    }
 }
 
+/**
+ * Updates the recent supplier payments list on the dashboard, showing the last 5 payments.
+ * @param {Array<Object>} expenses - The array of all expense objects.
+ */
 function updateSupplierPayments(expenses) {
-const supplierPayments = expenses
-.filter(expense => expense.category === 'Supplier Payment')
-.sort((a, b) => new Date(b.date) - new Date(a.date))
-.slice(0, 5);
+    const supplierPayments = expenses
+        .filter(expense => expense.category === 'Supplier Payment')
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .slice(0, 5);
 
-const paymentsContainer = document.getElementById('supplierPaymentsDashboard');
-if (supplierPayments.length > 0) {
-paymentsContainer.innerHTML = supplierPayments.map(payment => `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${payment.description || 'Supplier Payment'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(payment.date).toLocaleDateString()}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(payment.amount)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${payment.notes || ''}</td>
-</tr>
-`).join('');
-} else {
-paymentsContainer.innerHTML = '<tr><td colspan="4" class="px-6 py-4 text-center text-sm text-gray-500">No recent payments</td></tr>';
-}
+    const paymentsContainer = document.getElementById('supplierPaymentsDashboard');
+    if (supplierPayments.length > 0) {
+        paymentsContainer.innerHTML = supplierPayments.map(payment => `
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${payment.description || 'Supplier Payment'}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(payment.date).toLocaleDateString()}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(payment.amount)}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${payment.notes || ''}</td>
+            </tr>`).join('');
+    } else {
+        paymentsContainer.innerHTML = '<tr><td colspan="4" class="px-6 py-4 text-center text-sm text-gray-500">No recent payments</td></tr>';
+    }
 }
 
 // ===========================
 // PRODUCTS FUNCTIONALITY
 // ===========================
 
+/**
+ * Loads products from storage, renders them in the product list table,
+ * and attaches event listeners for edit and delete actions.
+ */
 function loadProducts() {
-const products = getProducts();
-		const productList = document.getElementById('productList');
-		populateProductCategorySelect();
+    const products = getProducts();
+    const productList = document.getElementById('productList');
+    populateProductCategorySelect();
 
-if (products.length === 0) {
-productList.innerHTML = '<tr><td colspan="6" class="px-6 py-4 text-center text-sm text-gray-500">No products added yet</td></tr>';
-return;
+    if (products.length === 0) {
+        productList.innerHTML = '<tr><td colspan="6" class="px-6 py-4 text-center text-sm text-gray-500">No products added yet</td></tr>';
+        return;
+    }
+
+    productList.innerHTML = products.map(product => `
+        <tr>
+            <td class="px-6 py-4 whitespace-nowrap">
+                <div class="flex items-center">
+                    ${product.image ? `<img src="${product.image}" alt="${product.name}" class="h-10 w-10 rounded-full object-cover mr-3">` : ''}
+                    <div>
+                        <div class="text-sm font-medium text-gray-900">${product.name}</div>
+                        ${product.barcode ? `<div class="text-sm text-gray-500">Barcode: ${product.barcode}</div>` : ''}
+                    </div>
+                </div>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${product.category}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 ${product.stock < 10 ? 'text-red-600 font-semibold' : ''}">${product.stock}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(product.buyingPrice)}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(product.sellingPrice)}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+<button class="text-blue-900 hover:text-blue-700 mr-3 edit-product" data-id="${product.id}">Edit</button>
+<button class="text-red-600 hover:text-red-800 delete-product" data-id="${product.id}">Delete</button>
+            </td>
+        </tr>`).join('');
+
+    document.querySelectorAll('.edit-product').forEach(button => button.addEventListener('click', function() { editProduct(this.getAttribute('data-id')); }));
+    document.querySelectorAll('.delete-product').forEach(button => button.addEventListener('click', function() { deleteProduct(this.getAttribute('data-id')); }));
 }
 
-productList.innerHTML = products.map(product => `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap">
-<div class="flex items-center">
-${product.image ? `<img src="${product.image}" alt="${product.name}" class="h-10 w-10 rounded-full object-cover mr-3">` : ''}
-<div>
-<div class="text-sm font-medium text-gray-900">${product.name}</div>
-${product.barcode ? `<div class="text-sm text-gray-500">Barcode: ${product.barcode}</div>` : ''}
-</div>
-</div>
-</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${product.category}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 ${product.stock < 10 ? 'text-red-600 font-semibold' : ''}">${product.stock}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(product.buyingPrice)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(product.sellingPrice)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-<button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-product" data-id="${product.id}">Edit</button>
-<button class="text-red-600 hover:text-red-900 delete-product" data-id="${product.id}">Delete</button>
-</td>
-</tr>
-`).join('');
-
-// Add event listeners to edit and delete buttons
-document.querySelectorAll('.edit-product').forEach(button => {
-button.addEventListener('click', function() {
-const productId = this.getAttribute('data-id');
-editProduct(productId);
-});
-});
-
-document.querySelectorAll('.delete-product').forEach(button => {
-button.addEventListener('click', function() {
-const productId = this.getAttribute('data-id');
-deleteProduct(productId);
-});
-});
-}
-
+/**
+ * Populates the supplier dropdown in the product form.
+ */
 function loadSuppliersForProducts() {
-const suppliers = getSuppliers();
-const supplierSelect = document.getElementById('productSupplier');
-supplierSelect.innerHTML = '<option value="">Select a supplier</option>' +
-suppliers.map(supplier => `<option value="${supplier.id}">${supplier.name}</option>`).join('');
+    const suppliers = getSuppliers();
+    const supplierSelect = document.getElementById('productSupplier');
+    supplierSelect.innerHTML = '<option value="">Select a supplier</option>' + suppliers.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
 }
 
+/**
+ * Populates the product form with data from an existing product for editing.
+ * @param {string} productId The ID of the product to edit.
+ */
 function editProduct(productId) {
-const products = getProducts();
-const product = products.find(p => p.id === productId);
-
-if (product) {
-document.getElementById('productId').value = product.id;
-document.getElementById('productName').value = product.name;
-		populateProductCategorySelect();
-		document.getElementById('productCategory').value = product.category;
-document.getElementById('productStock').value = product.stock;
-document.getElementById('productBuyingPrice').value = product.buyingPrice;
-document.getElementById('productSellingPrice').value = product.sellingPrice;
-document.getElementById('productSize').value = product.size || '';
-document.getElementById('productColor').value = product.color || '';
-document.getElementById('productSupplier').value = product.supplierId || '';
-document.getElementById('productBarcode').value = product.barcode || '';
-
-// Scroll to form
-document.getElementById('productForm').scrollIntoView({ behavior: 'smooth' });
-}
+    const product = getProducts().find(p => p.id === productId);
+    if (product) {
+        document.getElementById('productId').value = product.id;
+        document.getElementById('productName').value = product.name;
+        populateProductCategorySelect();
+        document.getElementById('productCategory').value = product.category;
+        document.getElementById('productStock').value = product.stock;
+        document.getElementById('productBuyingPrice').value = product.buyingPrice;
+        document.getElementById('productSellingPrice').value = product.sellingPrice;
+        document.getElementById('productSize').value = product.size || '';
+        document.getElementById('productColor').value = product.color || '';
+        document.getElementById('productSupplier').value = product.supplierId || '';
+        document.getElementById('productBarcode').value = product.barcode || '';
+        document.getElementById('productForm').scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
+/**
+ * Deletes a product after confirmation.
+ * @param {string} productId The ID of the product to delete.
+ */
 function deleteProduct(productId) {
-if (confirm('Are you sure you want to delete this product?')) {
-const products = getProducts();
-const updatedProducts = products.filter(p => p.id !== productId);
-saveProducts(updatedProducts);
-loadProducts();
-showToast('Product deleted successfully', 'success');
-}
+    if (confirm('Are you sure you want to delete this product?')) {
+        saveProducts(getProducts().filter(p => p.id !== productId));
+        loadProducts();
+        showToast('Product deleted successfully', 'success');
+    }
 }
 
-// Product form submission
-document.getElementById('productForm').addEventListener('submit', function(e) {
-e.preventDefault();
-
-const productId = document.getElementById('productId').value;
-const name = document.getElementById('productName').value.trim();
-const category = document.getElementById('productCategory').value;
-const stock = parseInt(document.getElementById('productStock').value);
-const buyingPrice = parseFloat(document.getElementById('productBuyingPrice').value);
-const sellingPrice = parseFloat(document.getElementById('productSellingPrice').value);
-const size = document.getElementById('productSize').value.trim();
-const color = document.getElementById('productColor').value.trim();
-const supplierId = document.getElementById('productSupplier').value;
-const barcode = document.getElementById('productBarcode').value.trim();
-
-if (!name || !category || isNaN(stock) || isNaN(buyingPrice) || isNaN(sellingPrice)) {
-showToast('Please fill in all required fields', 'error');
-return;
-}
-
-if (sellingPrice <= buyingPrice) {
-showToast('Selling price must be greater than buying price', 'error');
-return;
-}
-
-const products = getProducts();
-const imageFile = document.getElementById('productImage').files[0];
-
-if (productId) {
-// Update existing product
-const index = products.findIndex(p => p.id === productId);
-if (index !== -1) {
-products[index] = {
-...products[index],
-name,
-category,
-stock,
-buyingPrice,
-sellingPrice,
-size: size || null,
-color: color || null,
-supplierId: supplierId || null,
-barcode: barcode || null
-};
-
-// Handle image upload if provided
-if (imageFile) {
-const reader = new FileReader();
-reader.onload = function(e) {
-products[index].image = e.target.result;
-saveProducts(products);
-loadProducts();
-showToast('Product updated successfully', 'success');
-resetProductForm();
-};
-reader.readAsDataURL(imageFile);
-} else {
-saveProducts(products);
-loadProducts();
-showToast('Product updated successfully', 'success');
-resetProductForm();
-}
-}
-} else {
-// Add new product
-const newProduct = {
-id: generateId(),
-name,
-category,
-stock,
-buyingPrice,
-sellingPrice,
-size: size || null,
-color: color || null,
-supplierId: supplierId || null,
-barcode: barcode || null,
-image: null
-};
-
-if (imageFile) {
-const reader = new FileReader();
-reader.onload = function(e) {
-newProduct.image = e.target.result;
-products.push(newProduct);
-saveProducts(products);
-loadProducts();
-showToast('Product added successfully', 'success');
-resetProductForm();
-};
-reader.readAsDataURL(imageFile);
-} else {
-products.push(newProduct);
-saveProducts(products);
-loadProducts();
-showToast('Product added successfully', 'success');
-resetProductForm();
-}
-}
-});
-
+/**
+ * Resets the product form to its default state.
+ */
 function resetProductForm() {
-document.getElementById('productForm').reset();
-document.getElementById('productId').value = '';
-		populateProductCategorySelect();
+    document.getElementById('productForm').reset();
+    document.getElementById('productId').value = '';
+    populateProductCategorySelect();
 }
 
-	function attachCategoryAddHandler() {
-		const addBtn = document.getElementById('addCategoryButton');
-		const input = document.getElementById('newCategoryInput');
-		if (!addBtn || !input) return;
-		addBtn.onclick = function() {
-			const newCat = (input.value || '').trim();
-			if (!newCat) {
-				showToast('Enter a category name', 'error');
-				return;
-			}
-			const categories = getCategories();
-			if (categories.includes(newCat)) {
-				showToast('Category already exists', 'warning');
-				return;
-			}
-			categories.push(newCat);
-			saveCategories(categories);
-			populateProductCategorySelect();
-			document.getElementById('productCategory').value = newCat;
-			populateSalesFilters();
-			input.value = '';
-			showToast('Category added', 'success');
-		};
-	}
+/**
+ * Attaches an event handler to the 'Add Category' button.
+ */
+function attachCategoryAddHandler() {
+    const addBtn = document.getElementById('addCategoryButton');
+    const input = document.getElementById('newCategoryInput');
+    if (!addBtn || !input) return;
+    addBtn.onclick = function() {
+        const newCat = (input.value || '').trim();
+        if (!newCat) return showToast('Enter a category name', 'error');
+        const categories = getCategories();
+        if (categories.includes(newCat)) return showToast('Category already exists', 'warning');
 
-document.getElementById('productClearBtn').addEventListener('click', resetProductForm);
-
-// Product search
-document.getElementById('productSearchButton').addEventListener('click', function() {
-const searchTerm = document.getElementById('productSearch').value.toLowerCase();
-const products = getProducts();
-const filteredProducts = products.filter(product =>
-product.name.toLowerCase().includes(searchTerm) ||
-product.category.toLowerCase().includes(searchTerm) ||
-(product.barcode && product.barcode.toLowerCase().includes(searchTerm))
-);
-
-const productList = document.getElementById('productList');
-if (filteredProducts.length === 0) {
-productList.innerHTML = '<tr><td colspan="6" class="px-6 py-4 text-center text-sm text-gray-500">No products found</td></tr>';
-return;
+        categories.push(newCat);
+        saveCategories(categories);
+        populateProductCategorySelect();
+        document.getElementById('productCategory').value = newCat;
+        populateSalesFilters();
+        input.value = '';
+        showToast('Category added', 'success');
+    };
 }
-
-productList.innerHTML = filteredProducts.map(product => `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap">
-<div class="flex items-center">
-${product.image ? `<img src="${product.image}" alt="${product.name}" class="h-10 w-10 rounded-full object-cover mr-3">` : ''}
-<div>
-<div class="text-sm font-medium text-gray-900">${product.name}</div>
-${product.barcode ? `<div class="text-sm text-gray-500">Barcode: ${product.barcode}</div>` : ''}
-</div>
-</div>
-</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${product.category}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 ${product.stock < 10 ? 'text-red-600 font-semibold' : ''}">${product.stock}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(product.buyingPrice)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(product.sellingPrice)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-<button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-product" data-id="${product.id}">Edit</button>
-<button class="text-red-600 hover:text-red-900 delete-product" data-id="${product.id}">Delete</button>
-</td>
-</tr>
-`).join('');
-
-// Reattach event listeners
-document.querySelectorAll('.edit-product').forEach(button => {
-button.addEventListener('click', function() {
-const productId = this.getAttribute('data-id');
-editProduct(productId);
-});
-});
-
-document.querySelectorAll('.delete-product').forEach(button => {
-button.addEventListener('click', function() {
-const productId = this.getAttribute('data-id');
-deleteProduct(productId);
-});
-});
-});
 
 // ===========================
 // SALES FUNCTIONALITY
@@ -2045,1797 +1961,1479 @@ deleteProduct(productId);
 
 let cart = [];
 
+/**
+ * Loads products and category filters for the sales view.
+ */
 function loadProductsForSales() {
-		const products = getProducts();
-		populateSalesFilters();
-		renderSalesProductGrid(products);
+    populateSalesFilters();
+    applySalesFilters();
 }
 
-	function populateSalesFilters() {
-		const categories = getCategories();
-		const chips = document.getElementById('salesCategoryChips');
-		if (chips) {
-			chips.innerHTML = categories.map(c => `
-				<button type="button" class="px-3 py-1 rounded-full border text-sm sales-chip" data-cat="${c}">${c}</button>
-			`).join('');
-			chips.querySelectorAll('.sales-chip').forEach(btn => {
-				btn.addEventListener('click', function() {
-					this.classList.toggle('bg-indigo-600');
-					this.classList.toggle('text-white');
-					applySalesFilters();
-				});
-			});
-		}
-		const search = document.getElementById('salesSearch');
-		if (search) {
-			search.removeEventListener('input', onSalesSearchChange);
-			search.addEventListener('input', onSalesSearchChange);
-		}
-	}
+/**
+ * Populates the category filter chips in the sales view.
+ */
+function populateSalesFilters() {
+    const categories = getCategories();
+    const chips = document.getElementById('salesCategoryChips');
+    if (chips) {
+        chips.innerHTML = categories.map(c => `<button type="button" class="px-3 py-1 rounded-full border text-sm sales-chip" data-cat="${c}">${c}</button>`).join('');
+        chips.querySelectorAll('.sales-chip').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.classList.toggle('bg-blue-900');
+                this.classList.toggle('text-white');
+                applySalesFilters();
+            });
+        });
+    }
+    const search = document.getElementById('salesSearch');
+    if (search) {
+        search.removeEventListener('input', applySalesFilters);
+        search.addEventListener('input', applySalesFilters);
+    }
+}
 
-	function populateProductCategorySelect() {
-		const categories = getCategories();
-		const select = document.getElementById('productCategory');
-		if (!select) return;
-		const current = select.value;
-		select.innerHTML = '<option value="">Select Category</option>' + categories.map(c => `<option value="${c}">${c}</option>`).join('');
-		if (current) select.value = current;
-	}
+/**
+ * Populates the category select dropdown in the product form.
+ */
+function populateProductCategorySelect() {
+    const categories = getCategories();
+    const select = document.getElementById('productCategory');
+    if (!select) return;
+    const current = select.value;
+    select.innerHTML = '<option value="">Select Category</option>' + categories.map(c => `<option value="${c}">${c}</option>`).join('');
+    if (current) select.value = current;
+}
 
-	function onSalesSearchChange() {
-		applySalesFilters();
-	}
+/**
+ * Filters and displays products in the sales grid based on search and category filters.
+ */
+function applySalesFilters() {
+    const allProducts = getProducts();
+    const term = (document.getElementById('salesSearch').value || '').toLowerCase();
+    const selectedCats = Array.from(document.querySelectorAll('#salesCategoryChips .sales-chip.bg-indigo-600')).map(b => b.getAttribute('data-cat'));
+    const filtered = allProducts.filter(p =>
+        (selectedCats.length === 0 || selectedCats.includes(p.category)) &&
+        (p.name.toLowerCase().includes(term) || (p.barcode || '').toLowerCase().includes(term))
+    );
+    renderSalesProductGrid(filtered);
+}
 
-	function onSalesFilterChange() {
-		applySalesFilters();
-	}
+/**
+ * Renders the product grid in the sales view.
+ * @param {Array<Object>} products The products to render.
+ */
+function renderSalesProductGrid(products) {
+    const grid = document.getElementById('salesProductGrid');
+    if (!grid) return;
+    if (!products || products.length === 0) {
+        grid.innerHTML = '<p class="text-gray-500 col-span-full text-center">No products found</p>';
+        return;
+    }
+    grid.innerHTML = products.map(p => `
+        <button class="border rounded-lg p-3 text-left hover:shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 add-to-cart-card" data-id="${p.id}" ${p.stock <= 0 ? 'disabled' : ''}>
+            ${p.image ? `<img src="${p.image}" alt="${p.name}" class="w-full h-28 object-cover rounded mb-2">` : ''}
+            <div class="flex justify-between items-center">
+                <span class="font-semibold truncate">${p.name}</span>
+                <span class="text-sm text-gray-500">${formatCurrency(p.sellingPrice)}</span>
+            </div>
+            <div class="text-xs text-gray-600 mt-1">${p.category || 'Uncategorized'}</div>
+            <div class="text-xs mt-1 ${p.stock <= 0 ? 'text-red-600 font-semibold' : 'text-gray-600'}">Stock left: ${p.stock}</div>
+        </button>`).join('');
+    grid.querySelectorAll('.add-to-cart-card').forEach(btn => {
+        btn.addEventListener('click', function() { addProductCardToCart(this.getAttribute('data-id')); });
+    });
+}
 
-	function applySalesFilters() {
-		const allProducts = getProducts();
-		const term = (document.getElementById('salesSearch').value || '').toLowerCase();
-		const selectedCats = Array.from(document.querySelectorAll('#salesCategoryChips .sales-chip.bg-indigo-600')).map(b => b.getAttribute('data-cat'));
-		const filtered = allProducts.filter(p =>
-			(selectedCats.length === 0 || selectedCats.includes(p.category)) &&
-			(p.name.toLowerCase().includes(term) || (p.barcode || '').toLowerCase().includes(term))
-		);
-		renderSalesProductGrid(filtered);
-	}
+/**
+ * Adds a product to the cart when its card is clicked in the sales view.
+ * @param {string} productId The ID of the product to add.
+ */
+function addProductCardToCart(productId) {
+    const product = getProducts().find(p => p.id === productId);
+    if (!product) return showToast('Product not found', 'error');
+    if (product.stock < 1) return showToast(`Insufficient stock for ${product.name}`, 'error');
 
-	function renderSalesProductGrid(products) {
-		const grid = document.getElementById('salesProductGrid');
-		if (!grid) return;
-		if (!products || products.length === 0) {
-			grid.innerHTML = '<p class="text-gray-500 col-span-full text-center">No products</p>';
-			return;
-		}
-		grid.innerHTML = products.map(p => `
-			<button class="border rounded-lg p-3 text-left hover:shadow focus:outline-none focus:ring-2 focus:ring-indigo-500 add-to-cart-card" data-id="${p.id}">
-				${p.image ? `<img src="${p.image}" alt="${p.name}" class="w-full h-28 object-cover rounded mb-2">` : ''}
-				<div class="flex justify-between items-center">
-					<span class="font-semibold truncate">${p.name}</span>
-					<span class="text-sm text-gray-500">${formatCurrency(p.sellingPrice)}</span>
-				</div>
-				<div class="text-xs text-gray-600 mt-1">${p.category || 'Uncategorized'}</div>
-				<div class="text-xs mt-1 ${p.stock <= 0 ? 'text-red-600 font-semibold' : 'text-gray-600'}">Stock left: ${p.stock}</div>
-			</button>
-		`).join('');
-		grid.querySelectorAll('.add-to-cart-card').forEach(btn => {
-			btn.addEventListener('click', function() {
-				addProductCardToCart(this.getAttribute('data-id'));
-			});
-		});
-	}
+    const existingItem = cart.find(item => item.productId === productId);
+    if (existingItem) {
+        existingItem.quantity++;
+        existingItem.total = calculateItemTotal(existingItem.price, existingItem.quantity, existingItem.discount);
+    } else {
+        const discount = parseFloat(document.getElementById('discountInput').value) || 0;
+        cart.push({
+            id: generateId(),
+            productId,
+            name: product.name,
+            price: product.sellingPrice,
+            quantity: 1,
+            discount,
+            total: calculateItemTotal(product.sellingPrice, 1, discount)
+        });
+    }
+    updateCartDisplay();
+    updateReceipt();
+    showToast(`${product.name} added to cart`, 'success');
+}
 
-	function addProductCardToCart(productId) {
-		const quantity = 1;
-		const discount = parseFloat(document.getElementById('discountInput').value) || 0;
-		const products = getProducts();
-		const product = products.find(p => p.id === productId);
-		if (!product) {
-			showToast('Product not found', 'error');
-			return;
-		}
-		if (product.stock < quantity) {
-			showToast(`Insufficient stock. Only ${product.stock} available`, 'error');
-			return;
-		}
-		const existingItemIndex = cart.findIndex(item => item.productId === productId);
-		if (existingItemIndex !== -1) {
-			cart[existingItemIndex].quantity += quantity;
-			cart[existingItemIndex].discount = discount;
-			cart[existingItemIndex].total = calculateItemTotal(product.sellingPrice, cart[existingItemIndex].quantity, discount);
-		} else {
-			const item = {
-				id: generateId(),
-				productId,
-				name: product.name,
-				price: product.sellingPrice,
-				quantity,
-				discount,
-				total: calculateItemTotal(product.sellingPrice, quantity, discount)
-			};
-			cart.push(item);
-		}
-		updateCartDisplay();
-		updateReceipt();
-		showToast('Product added to cart', 'success');
-	}
-
+/**
+ * Loads customers into the customer dropdown in the sales view.
+ */
 function loadCustomersForSales() {
-const customers = getCustomers();
-const customerSelect = document.getElementById('customerSelect');
-// Clear existing options except the first two
-customerSelect.innerHTML = '<option value="walk-in">Walk-in Customer</option><option value="online">Online Customer</option>';
-// Add customers to the dropdown
-customers.forEach(customer => {
-customerSelect.innerHTML += `<option value="${customer.id}">${customer.name}</option>`;
-});
+    const customers = getCustomers();
+    const customerSelect = document.getElementById('customerSelect');
+    customerSelect.innerHTML = '<option value="walk-in">Walk-in Customer</option><option value="online">Online Customer</option>';
+    customers.forEach(customer => {
+        customerSelect.innerHTML += `<option value="${customer.id}">${customer.name}</option>`;
+    });
 }
 
-function addToCart() {
-const productId = document.getElementById('productSelect').value;
-const quantity = parseInt(document.getElementById('quantityInput').value);
-const discount = parseFloat(document.getElementById('discountInput').value);
-
-if (!productId) {
-showToast('Please select a product', 'error');
-return;
-}
-
-if (isNaN(quantity) || quantity <= 0) {
-showToast('Please enter a valid quantity', 'error');
-return;
-}
-
-const products = getProducts();
-const product = products.find(p => p.id === productId);
-
-if (!product) {
-showToast('Product not found', 'error');
-return;
-}
-
-if (product.stock < quantity) {
-showToast(`Insufficient stock. Only ${product.stock} available`, 'error');
-return;
-}
-
-// Check if product already in cart
-const existingItemIndex = cart.findIndex(item => item.productId === productId);
-
-if (existingItemIndex !== -1) {
-// Update existing item
-cart[existingItemIndex].quantity += quantity;
-cart[existingItemIndex].discount = discount;
-cart[existingItemIndex].total = calculateItemTotal(product.sellingPrice, cart[existingItemIndex].quantity, discount);
-} else {
-// Add new item
-const item = {
-id: generateId(),
-productId,
-name: product.name,
-price: product.sellingPrice,
-quantity,
-discount,
-total: calculateItemTotal(product.sellingPrice, quantity, discount)
-};
-cart.push(item);
-}
-
-updateCartDisplay();
-updateReceipt();
-resetSaleForm();
-showToast('Product added to cart', 'success');
-}
-
+/**
+ * Calculates the total for a cart item, including discounts.
+ * @param {number} price The item's base price.
+ * @param {number} quantity The quantity of the item.
+ * @param {number} discount The discount percentage.
+ * @returns {number} The calculated total price.
+ */
 function calculateItemTotal(price, quantity, discount) {
-const discountedPrice = price * (1 - discount / 100);
-return discountedPrice * quantity;
+    const discountedPrice = price * (1 - discount / 100);
+    return discountedPrice * quantity;
 }
 
+/**
+ * Updates the cart display table and totals.
+ */
 function updateCartDisplay() {
-const cartItems = document.getElementById('cartItems');
-const cartTotal = document.getElementById('cartTotal');
+    const cartItems = document.getElementById('cartItems');
+    const cartTotalEl = document.getElementById('cartTotal');
 
-if (cart.length === 0) {
-cartItems.innerHTML = '<tr><td colspan="6" class="px-6 py-4 text-center text-sm text-gray-500">No items in cart</td></tr>';
-cartTotal.textContent = '0';
-return;
+    if (cart.length === 0) {
+        cartItems.innerHTML = '<tr><td colspan="6" class="px-6 py-4 text-center text-sm text-gray-500">No items in cart</td></tr>';
+        cartTotalEl.textContent = formatCurrency(0);
+        return;
+    }
+
+    cartItems.innerHTML = cart.map(item => `
+        <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.name}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(item.price)}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.quantity}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.discount}%</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(item.total)}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                <button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-cart-item" data-id="${item.id}">Edit</button>
+                <button class="text-red-600 hover:text-red-900 remove-from-cart" data-id="${item.id}">Remove</button>
+            </td>
+        </tr>`).join('');
+
+    let total = cart.reduce((sum, item) => sum + item.total, 0);
+    const orderDiscount = Math.min(100, Math.max(0, parseFloat(document.getElementById('orderDiscount')?.value) || 0));
+    total = total * (1 - orderDiscount / 100);
+
+    cartTotalEl.textContent = formatCurrency(total);
+    document.getElementById('amountPaid').value = Math.round(total);
+
+    document.querySelectorAll('.remove-from-cart').forEach(button => button.addEventListener('click', function() { removeFromCart(this.getAttribute('data-id')); }));
+    document.querySelectorAll('.edit-cart-item').forEach(button => button.addEventListener('click', function() { editCartItem(this.getAttribute('data-id')); }));
 }
 
-cartItems.innerHTML = cart.map(item => `
-<tr>
-		<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.name}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(item.price)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.quantity}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.discount}%</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(item.total)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-		<button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-cart-item" data-id="${item.id}">Edit</button>
-		<button class="text-red-600 hover:text-red-900 remove-from-cart" data-id="${item.id}">Remove</button>
-</td>
-</tr>
-`).join('');
-
-const total = cart.reduce((sum, item) => sum + item.total, 0);
-cartTotal.textContent = formatCurrency(total);
-
-// Update amount paid field
-document.getElementById('amountPaid').value = total;
-
-// Add event listeners to remove buttons
-		document.querySelectorAll('.remove-from-cart').forEach(button => {
-button.addEventListener('click', function() {
-const itemId = this.getAttribute('data-id');
-removeFromCart(itemId);
-});
-});
-		document.querySelectorAll('.edit-cart-item').forEach(button => {
-			button.addEventListener('click', function() {
-				const itemId = this.getAttribute('data-id');
-				editCartItem(itemId);
-			});
-		});
-}
-
+/**
+ * Removes an item from the cart.
+ * @param {string} itemId The ID of the cart item to remove.
+ */
 function removeFromCart(itemId) {
-cart = cart.filter(item => item.id !== itemId);
-updateCartDisplay();
-updateReceipt();
-showToast('Item removed from cart', 'success');
+    cart = cart.filter(item => item.id !== itemId);
+    updateCartDisplay();
+    updateReceipt();
+    showToast('Item removed from cart', 'success');
 }
 
+/**
+ * Edits the quantity and discount of a cart item.
+ * @param {string} itemId The ID of the cart item to edit.
+ */
 function editCartItem(itemId) {
-const itemIndex = cart.findIndex(i => i.id === itemId);
-if (itemIndex === -1) return;
-const item = cart[itemIndex];
-const newQty = parseInt(prompt('Enter quantity:', String(item.quantity)));
-if (!isFinite(newQty) || newQty <= 0) {
-    showToast('Invalid quantity', 'error');
-    return;
-}
-const newDiscount = parseFloat(prompt('Enter discount (%):', String(item.discount)));
-if (!isFinite(newDiscount) || newDiscount < 0 || newDiscount > 100) {
-    showToast('Invalid discount', 'error');
-    return;
-}
-// Validate against stock
-const products = getProducts();
-const product = products.find(p => p.id === item.productId);
-if (product && product.stock < newQty) {
-    showToast(`Insufficient stock. Only ${product.stock} available`, 'error');
-    return;
-}
-item.quantity = newQty;
-item.discount = newDiscount;
-item.total = calculateItemTotal(item.price, newQty, newDiscount);
-updateCartDisplay();
-updateReceipt();
-showToast('Item updated', 'success');
+    const item = cart.find(i => i.id === itemId);
+    if (!item) return;
+
+    const newQty = parseInt(prompt('Enter new quantity:', String(item.quantity)));
+    if (!isFinite(newQty) || newQty <= 0) return showToast('Invalid quantity', 'error');
+
+    const newDiscount = parseFloat(prompt('Enter new discount (%):', String(item.discount)));
+    if (!isFinite(newDiscount) || newDiscount < 0 || newDiscount > 100) return showToast('Invalid discount', 'error');
+
+    const product = getProducts().find(p => p.id === item.productId);
+    if (product && product.stock < newQty) return showToast(`Insufficient stock. Only ${product.stock} available`, 'error');
+
+    item.quantity = newQty;
+    item.discount = newDiscount;
+    item.total = calculateItemTotal(item.price, newQty, newDiscount);
+    updateCartDisplay();
+    updateReceipt();
+    showToast('Item updated', 'success');
 }
 
+/**
+ * Clears all items from the cart.
+ */
 function clearCart() {
-if (cart.length === 0) {
-showToast('Cart is already empty', 'info');
-return;
+    if (cart.length === 0) return showToast('Cart is already empty', 'info');
+    if (confirm('Are you sure you want to clear the cart?')) {
+        cart = [];
+        updateCartDisplay();
+        updateReceipt();
+        showToast('Cart cleared', 'success');
+    }
 }
 
-if (confirm('Are you sure you want to clear the cart?')) {
-cart = [];
-updateCartDisplay();
-updateReceipt();
-showToast('Cart cleared', 'success');
-}
-}
-
-function resetSaleForm() {
-document.getElementById('quantityInput').value = 1;
-document.getElementById('discountInput').value = 0;
-}
-
+/**
+ * Updates the receipt display based on the current cart state.
+ */
 function updateReceipt() {
-const receiptItems = document.getElementById('receiptItems');
-const receiptTotal = document.getElementById('receiptTotal');
-const receiptPaid = document.getElementById('receiptPaid');
-const receiptChange = document.getElementById('receiptChange');
-const receiptDate = document.getElementById('receiptDate');
+    const receiptItems = document.getElementById('receiptItems');
+    const receiptTotal = document.getElementById('receiptTotal');
+    const receiptPaid = document.getElementById('receiptPaid');
+    const receiptChange = document.getElementById('receiptChange');
+    const receiptDate = document.getElementById('receiptDate');
 
-if (cart.length === 0) {
-receiptItems.innerHTML = '<p class="text-center text-gray-500">No items</p>';
-receiptTotal.textContent = '0 MMK';
-receiptPaid.textContent = '0 MMK';
-receiptChange.textContent = '0 MMK';
-} else {
-receiptItems.innerHTML = cart.map(item => `
-<div class="flex justify-between text-sm">
-<span>${item.name} x${item.quantity}</span>
-<span>${formatCurrency(item.total)}</span>
-</div>
-`).join('');
+    if (cart.length === 0) {
+        receiptItems.innerHTML = '<p class="text-center text-gray-500">No items</p>';
+        receiptTotal.textContent = formatCurrency(0);
+        receiptPaid.textContent = formatCurrency(0);
+        receiptChange.textContent = formatCurrency(0);
+    } else {
+        receiptItems.innerHTML = cart.map(item => `
+            <div class="flex justify-between text-sm">
+                <span>${item.name} x${item.quantity}</span>
+                <span>${formatCurrency(item.total)}</span>
+            </div>`).join('');
 
-let total = cart.reduce((sum, item) => sum + item.total, 0);
-const orderDiscount = Math.min(100, Math.max(0, parseFloat(document.getElementById('orderDiscount')?.value) || 0));
-total = total * (1 - orderDiscount / 100);
-receiptTotal.textContent = formatCurrency(total);
+        let total = cart.reduce((sum, item) => sum + item.total, 0);
+        const orderDiscount = Math.min(100, Math.max(0, parseFloat(document.getElementById('orderDiscount')?.value) || 0));
+        total = total * (1 - orderDiscount / 100);
 
-const amountPaid = parseFloat(document.getElementById('amountPaid').value) || 0;
-receiptPaid.textContent = formatCurrency(amountPaid);
-receiptChange.textContent = formatCurrency(Math.max(0, amountPaid - total));
+        const amountPaid = parseFloat(document.getElementById('amountPaid').value) || 0;
+        receiptTotal.textContent = formatCurrency(total);
+        receiptPaid.textContent = formatCurrency(amountPaid);
+        receiptChange.textContent = formatCurrency(Math.max(0, amountPaid - total));
+    }
+    receiptDate.textContent = new Date().toLocaleString();
 }
 
-receiptDate.textContent = new Date().toLocaleDateString('en-US', {
-year: 'numeric',
-month: 'short',
-day: 'numeric',
-hour: '2-digit',
-minute: '2-digit'
-});
-}
-
+/**
+ * Finalizes the sale, updates stock, and saves the sale record.
+ */
 function completeSale() {
-if (cart.length === 0) {
-showToast('Cart is empty', 'error');
-return;
+    if (cart.length === 0) return showToast('Cart is empty', 'error');
+
+    let total = cart.reduce((sum, item) => sum + item.total, 0);
+    const orderDiscount = Math.min(100, Math.max(0, parseFloat(document.getElementById('orderDiscount')?.value) || 0));
+    const finalTotal = total * (1 - orderDiscount / 100);
+
+    const amountPaid = parseFloat(document.getElementById('amountPaid').value);
+    if (isNaN(amountPaid) || amountPaid < finalTotal) return showToast(`Amount paid must be at least ${formatCurrency(finalTotal)}`, 'error');
+
+    const products = getProducts();
+    cart.forEach(item => {
+        const productIndex = products.findIndex(p => p.id === item.productId);
+        if (productIndex !== -1) {
+            products[productIndex].stock -= item.quantity;
+        }
+    });
+    saveProducts(products);
+
+    const sale = {
+        id: generateId(),
+        date: new Date().toISOString().split('T')[0],
+        time: new Date().toLocaleTimeString(),
+        customerType: document.getElementById('customerSelect').value,
+        paymentMethod: document.getElementById('paymentMethod').value,
+        items: [...cart],
+        total: finalTotal,
+        profit: cart.reduce((sum, item) => {
+            const product = products.find(p => p.id === item.productId);
+            return sum + (item.total - (product ? product.buyingPrice * item.quantity : 0));
+        }, 0),
+        amountPaid,
+        orderDiscount,
+        change: amountPaid - finalTotal,
+        notes: document.getElementById('saleNotes').value.trim()
+    };
+
+    saveSales([...getSales(), sale]);
+    showToast('Sale completed successfully', 'success');
+
+    cart = [];
+    updateCartDisplay();
+    updateReceipt();
+    document.getElementById('saleNotes').value = '';
+
+    if (!views.dashboard.classList.contains('hidden')) {
+        loadDashboardData();
+    }
 }
 
-const customerType = document.getElementById('customerSelect').value;
-const paymentMethod = document.getElementById('paymentMethod').value;
-const amountPaid = parseFloat(document.getElementById('amountPaid').value);
-const notes = document.getElementById('saleNotes').value.trim();
-
-const total = cart.reduce((sum, item) => sum + item.total, 0);
-
-if (isNaN(amountPaid) || amountPaid < total) {
-showToast(`Amount paid must be at least ${formatCurrency(total)}`, 'error');
-return;
-}
-
-// Update product stocks
-const products = getProducts();
-cart.forEach(item => {
-const productIndex = products.findIndex(p => p.id === item.productId);
-if (productIndex !== -1) {
-products[productIndex].stock -= item.quantity;
-}
-});
-saveProducts(products);
-
-// Create sale record
-const sale = {
-id: generateId(),
-date: new Date().toISOString().split('T')[0],
-time: new Date().toLocaleTimeString(),
-customerType,
-paymentMethod,
-items: [...cart],
-total,
-profit: cart.reduce((sum, item) => {
-const product = products.find(p => p.id === item.productId);
-if (product) {
-return sum + (item.total - (product.buyingPrice * item.quantity));
-}
-return sum;
-}, 0),
-amountPaid,
-orderDiscount: Math.min(100, Math.max(0, parseFloat(document.getElementById('orderDiscount')?.value) || 0)),
-change: amountPaid - total,
-notes
-};
-
-const sales = getSales();
-sales.push(sale);
-saveSales(sales);
-
-// Show success message
-showToast('Sale completed successfully', 'success');
-
-// Reset cart and form
-cart = [];
-updateCartDisplay();
-updateReceipt();
-document.getElementById('saleNotes').value = '';
-
-// Update dashboard if visible
-if (!views.dashboard.classList.contains('hidden')) {
-loadDashboardData();
-}
-}
-
+/**
+ * Opens a print dialog for the current receipt.
+ */
 function printReceipt() {
-if (cart.length === 0) {
-showToast('No items to print', 'error');
-return;
+    if (cart.length === 0) return showToast('No items to print', 'error');
+    const receiptContent = document.getElementById('receiptContent').innerHTML;
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(`
+        <!DOCTYPE html>
+        <html><head><title>Receipt</title>
+        <style>
+            body { font-family: 'Courier New', Courier, monospace; margin: 0; padding: 10px; }
+            .receipt { max-width: 300px; margin: 0 auto; }
+            .text-center { text-align: center; }
+            .border-t, .border-b { border-top: 1px dashed #000; }
+            .border-b { border-bottom: 1px dashed #000; }
+            .py-2 { padding: 5px 0; }
+            .mb-4 { margin-bottom: 10px; }
+            .flex { display: flex; }
+            .justify-between { justify-content: space-between; }
+            .font-semibold { font-weight: bold; }
+            .text-sm { font-size: 12px; }
+        </style>
+        </head><body>${receiptContent}</body></html>`);
+    printWindow.document.close();
+    printWindow.print();
 }
-
-const receiptContent = document.getElementById('receiptContent').innerHTML;
-const printWindow = window.open('', '_blank');
-printWindow.document.write(`
-<!DOCTYPE html>
-<html>
-<head>
-<title>Receipt</title>
-<style>
-body { font-family: Arial, sans-serif; margin: 20px; }
-.receipt { max-width: 300px; margin: 0 auto; }
-.text-center { text-align: center; }
-.border-t { border-top: 1px solid #000; }
-.border-b { border-bottom: 1px solid #000; }
-.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-.mb-4 { margin-bottom: 1rem; }
-.flex { display: flex; }
-.justify-between { justify-content: space-between; }
-.font-semibold { font-weight: 600; }
-.text-sm { font-size: 0.875rem; }
-</style>
-</head>
-<body>
-${receiptContent}
-</body>
-</html>
-`);
-printWindow.document.close();
-printWindow.print();
-}
-
-// Sales event listeners
-const addToCartBtnEl = document.getElementById('addToCartButton');
-if (addToCartBtnEl) addToCartBtnEl.addEventListener('click', addToCart);
-const clearCartBtnEl = document.getElementById('clearCartButton');
-if (clearCartBtnEl) clearCartBtnEl.addEventListener('click', clearCart);
-const completeSaleBtnEl = document.getElementById('completeSaleButton');
-if (completeSaleBtnEl) completeSaleBtnEl.addEventListener('click', completeSale);
-const printReceiptBtnEl = document.getElementById('printReceiptButton');
-if (printReceiptBtnEl) printReceiptBtnEl.addEventListener('click', printReceipt);
-
-// Update change amount when amount paid changes
-document.getElementById('amountPaid').addEventListener('input', function() {
-let total = cart.reduce((sum, item) => sum + item.total, 0);
-const orderDiscount = Math.min(100, Math.max(0, parseFloat(document.getElementById('orderDiscount')?.value) || 0));
-total = total * (1 - orderDiscount / 100);
-const amountPaid = parseFloat(this.value) || 0;
-const change = Math.max(0, amountPaid - total);
-document.getElementById('changeAmount').value = change;
-updateReceipt();
-});
 
 // ===========================
 // SUPPLIERS FUNCTIONALITY
 // ===========================
 
+/**
+ * Loads and displays the list of suppliers.
+ */
 function loadSuppliers() {
-const suppliers = getSuppliers();
-const supplierList = document.getElementById('supplierList');
+    const suppliers = getSuppliers();
+    const supplierList = document.getElementById('supplierList');
 
-if (suppliers.length === 0) {
-supplierList.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500">No suppliers added yet</td></tr>';
-return;
+    if (suppliers.length === 0) {
+        supplierList.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500">No suppliers added yet</td></tr>';
+        return;
+    }
+
+    supplierList.innerHTML = suppliers.map(supplier => `
+        <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${supplier.name}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${supplier.phone || 'N/A'}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${supplier.email || 'N/A'}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${supplier.address || 'N/A'}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                <button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-supplier" data-id="${supplier.id}">Edit</button>
+                <button class="text-red-600 hover:text-red-900 delete-supplier" data-id="${supplier.id}">Delete</button>
+            </td>
+        </tr>`).join('');
+
+    document.querySelectorAll('.edit-supplier').forEach(button => button.addEventListener('click', function() { editSupplier(this.getAttribute('data-id')); }));
+    document.querySelectorAll('.delete-supplier').forEach(button => button.addEventListener('click', function() { deleteSupplier(this.getAttribute('data-id')); }));
 }
 
-	// ===========================
-	// SUPPLIER PAYMENTS (BY SUPPLIER)
-	// ===========================
+/**
+ * Initializes the UI elements for supplier payments.
+ */
+function initializeSupplierPaymentsUI() {
+    populateSupplierPaymentSelect();
+    const dateInput = document.getElementById('supplierPaymentDate');
+    if (dateInput) dateInput.value = new Date().toISOString().split('T')[0];
 
-	function initializeSupplierPaymentsUI() {
-		populateSupplierPaymentSelect();
-		// default date today
-		const dateInput = document.getElementById('supplierPaymentDate');
-		if (dateInput) {
-			dateInput.value = new Date().toISOString().split('T')[0];
-		}
-		const select = document.getElementById('supplierPaymentSelect');
-		if (select) {
-			select.removeEventListener('change', onSupplierPaymentSelectChange);
-			select.addEventListener('change', onSupplierPaymentSelectChange);
-		}
-		const addBtn = document.getElementById('addSupplierPaymentBtn');
-		if (addBtn) {
-			addBtn.removeEventListener('click', onAddSupplierPayment);
-			addBtn.addEventListener('click', onAddSupplierPayment);
-		}
-		// Recompute if already selected
-		if (select && select.value) {
-			updateSupplierPaymentSummary(select.value);
-			renderSupplierPaymentHistory(select.value);
-		}
-	}
+    const select = document.getElementById('supplierPaymentSelect');
+    if (select) {
+        select.removeEventListener('change', onSupplierPaymentSelectChange);
+        select.addEventListener('change', onSupplierPaymentSelectChange);
+        if (select.value) {
+            updateSupplierPaymentSummary(select.value);
+            renderSupplierPaymentHistory(select.value);
+        }
+    }
 
-	function populateSupplierPaymentSelect() {
-		const suppliers = getSuppliers();
-		const select = document.getElementById('supplierPaymentSelect');
-		if (!select) return;
-		const current = select.value;
-		select.innerHTML = '<option value="">Select a supplier</option>' +
-			suppliers.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
-		if (current) {
-			select.value = current;
-		}
-	}
-
-	function onSupplierPaymentSelectChange(e) {
-		const supplierId = e.target.value;
-		updateSupplierPaymentSummary(supplierId);
-		renderSupplierPaymentHistory(supplierId);
-	}
-
-	function updateSupplierPaymentSummary(supplierId) {
-		const totalPiecesEl = document.getElementById('supplierTotalPieces');
-		const totalBuyingEl = document.getElementById('supplierTotalBuying');
-		const totalPaidEl = document.getElementById('supplierTotalPaid');
-		const remainingEl = document.getElementById('supplierTotalRemaining');
-		if (!supplierId) {
-			if (totalPiecesEl) totalPiecesEl.textContent = '0';
-			if (totalBuyingEl) totalBuyingEl.textContent = formatCurrency(0);
-			if (totalPaidEl) totalPaidEl.textContent = formatCurrency(0);
-			if (remainingEl) remainingEl.textContent = formatCurrency(0);
-			return;
-		}
-		const products = getProducts();
-		const expenses = getExpenses();
-		const supplierProducts = products.filter(p => p.supplierId === supplierId);
-		const totalPieces = supplierProducts.reduce((sum, p) => sum + (parseInt(p.stock, 10) || 0), 0);
-		const totalBuying = supplierProducts.reduce((sum, p) => sum + ((parseFloat(p.buyingPrice) || 0) * ((parseInt(p.stock, 10) || 0))), 0);
-		const paid = expenses
-			.filter(e => e.category === 'Supplier Payment' && e.supplierId === supplierId)
-			.reduce((sum, e) => sum + (parseFloat(e.amount) || 0), 0);
-		const remaining = Math.max(0, totalBuying - paid);
-		if (totalPiecesEl) totalPiecesEl.textContent = String(totalPieces);
-		if (totalBuyingEl) totalBuyingEl.textContent = formatCurrency(totalBuying);
-		if (totalPaidEl) totalPaidEl.textContent = formatCurrency(paid);
-		if (remainingEl) remainingEl.textContent = formatCurrency(remaining);
-	}
-
-	function renderSupplierPaymentHistory(supplierId) {
-		const tbody = document.getElementById('supplierPaymentHistoryBody');
-		if (!tbody) return;
-		if (!supplierId) {
-			tbody.innerHTML = '<tr><td colspan="4" class="px-6 py-4 text-center text-sm text-gray-500">Select a supplier</td></tr>';
-			return;
-		}
-		const expenses = getExpenses()
-			.filter(e => e.category === 'Supplier Payment' && e.supplierId === supplierId)
-			.sort((a, b) => new Date(b.date) - new Date(a.date));
-		if (expenses.length === 0) {
-			tbody.innerHTML = '<tr><td colspan="4" class="px-6 py-4 text-center text-sm text-gray-500">No payments recorded</td></tr>';
-			return;
-		}
-		tbody.innerHTML = expenses.map(e => `
-			<tr>
-				<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${new Date(e.date).toLocaleDateString()}</td>
-				<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(e.amount)}</td>
-				<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${e.description || ''}</td>
-				<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-					<button class="text-red-600 hover:text-red-900 delete-supplier-payment" data-id="${e.id}" data-supplier="${supplierId}">Delete</button>
-				</td>
-			</tr>
-		`).join('');
-		// Attach delete handlers
-		tbody.querySelectorAll('.delete-supplier-payment').forEach(btn => {
-			btn.addEventListener('click', function() {
-				const id = this.getAttribute('data-id');
-				const sid = this.getAttribute('data-supplier');
-				deleteSupplierPayment(id, sid);
-			});
-		});
-	}
-
-	function onAddSupplierPayment(e) {
-		e.preventDefault();
-		const supplierId = document.getElementById('supplierPaymentSelect').value;
-		const amount = parseFloat(document.getElementById('supplierPaymentAmount').value);
-		const date = document.getElementById('supplierPaymentDate').value;
-		const notes = document.getElementById('supplierPaymentNotes').value.trim();
-		if (!supplierId) {
-			showToast('Please select a supplier', 'error');
-			return;
-		}
-		if (isNaN(amount) || amount <= 0 || !date) {
-			showToast('Enter valid amount and date', 'error');
-			return;
-		}
-		const expenses = getExpenses();
-		const newExpense = {
-			id: generateId(),
-			category: 'Supplier Payment',
-			amount,
-			date,
-			description: notes || null,
-			supplierId
-		};
-		expenses.push(newExpense);
-		saveExpenses(expenses);
-		showToast('Supplier payment recorded', 'success');
-		// clear amount and notes
-		document.getElementById('supplierPaymentAmount').value = '';
-		document.getElementById('supplierPaymentNotes').value = '';
-		updateSupplierPaymentSummary(supplierId);
-		renderSupplierPaymentHistory(supplierId);
-	}
-
-	function deleteSupplierPayment(expenseId, supplierId) {
-		if (!confirm('Delete this payment?')) return;
-		const expenses = getExpenses();
-		const updated = expenses.filter(e => e.id !== expenseId);
-		saveExpenses(updated);
-		showToast('Payment deleted', 'success');
-		updateSupplierPaymentSummary(supplierId);
-		renderSupplierPaymentHistory(supplierId);
-	}
-
-supplierList.innerHTML = suppliers.map(supplier => `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${supplier.name}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${supplier.phone || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${supplier.email || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${supplier.address || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-<button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-supplier" data-id="${supplier.id}">Edit</button>
-<button class="text-red-600 hover:text-red-900 delete-supplier" data-id="${supplier.id}">Delete</button>
-</td>
-</tr>
-`).join('');
-
-// Add event listeners to edit and delete buttons
-document.querySelectorAll('.edit-supplier').forEach(button => {
-button.addEventListener('click', function() {
-const supplierId = this.getAttribute('data-id');
-editSupplier(supplierId);
-});
-});
-
-document.querySelectorAll('.delete-supplier').forEach(button => {
-button.addEventListener('click', function() {
-const supplierId = this.getAttribute('data-id');
-deleteSupplier(supplierId);
-});
-});
+    const addBtn = document.getElementById('addSupplierPaymentBtn');
+    if (addBtn) {
+        addBtn.removeEventListener('click', onAddSupplierPayment);
+        addBtn.addEventListener('click', onAddSupplierPayment);
+    }
 }
 
+/**
+ * Populates the supplier dropdown for payment tracking.
+ */
+function populateSupplierPaymentSelect() {
+    const suppliers = getSuppliers();
+    const select = document.getElementById('supplierPaymentSelect');
+    if (!select) return;
+    const current = select.value;
+    select.innerHTML = '<option value="">Select a supplier</option>' + suppliers.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
+    if (current) select.value = current;
+}
+
+/**
+ * Handles the change event for the supplier payment dropdown.
+ * @param {Event} e The change event object.
+ */
+function onSupplierPaymentSelectChange(e) {
+    const supplierId = e.target.value;
+    updateSupplierPaymentSummary(supplierId);
+    renderSupplierPaymentHistory(supplierId);
+}
+
+/**
+ * Updates the summary of payments for a selected supplier.
+ * @param {string} supplierId The ID of the selected supplier.
+ */
+function updateSupplierPaymentSummary(supplierId) {
+    const totalPiecesEl = document.getElementById('supplierTotalPieces');
+    const totalBuyingEl = document.getElementById('supplierTotalBuying');
+    const totalPaidEl = document.getElementById('supplierTotalPaid');
+    const remainingEl = document.getElementById('supplierTotalRemaining');
+
+    if (!supplierId) {
+        if (totalPiecesEl) totalPiecesEl.textContent = '0';
+        if (totalBuyingEl) totalBuyingEl.textContent = formatCurrency(0);
+        if (totalPaidEl) totalPaidEl.textContent = formatCurrency(0);
+        if (remainingEl) remainingEl.textContent = formatCurrency(0);
+        return;
+    }
+
+    const products = getProducts().filter(p => p.supplierId === supplierId);
+    const payments = getExpenses().filter(e => e.category === 'Supplier Payment' && e.supplierId === supplierId);
+
+    const totalPieces = products.reduce((sum, p) => sum + (parseInt(p.stock, 10) || 0), 0);
+    const totalBuying = products.reduce((sum, p) => sum + ((parseFloat(p.buyingPrice) || 0) * (parseInt(p.stock, 10) || 0)), 0);
+    const totalPaid = payments.reduce((sum, p) => sum + (parseFloat(p.amount) || 0), 0);
+
+    if (totalPiecesEl) totalPiecesEl.textContent = String(totalPieces);
+    if (totalBuyingEl) totalBuyingEl.textContent = formatCurrency(totalBuying);
+    if (totalPaidEl) totalPaidEl.textContent = formatCurrency(totalPaid);
+    if (remainingEl) remainingEl.textContent = formatCurrency(Math.max(0, totalBuying - totalPaid));
+}
+
+/**
+ * Renders the payment history for a selected supplier.
+ * @param {string} supplierId The ID of the selected supplier.
+ */
+function renderSupplierPaymentHistory(supplierId) {
+    const tbody = document.getElementById('supplierPaymentHistoryBody');
+    if (!tbody) return;
+    if (!supplierId) {
+        tbody.innerHTML = '<tr><td colspan="4" class="px-6 py-4 text-center text-sm text-gray-500">Select a supplier</td></tr>';
+        return;
+    }
+    const payments = getExpenses()
+        .filter(e => e.category === 'Supplier Payment' && e.supplierId === supplierId)
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    if (payments.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" class="px-6 py-4 text-center text-sm text-gray-500">No payments recorded</td></tr>';
+        return;
+    }
+    tbody.innerHTML = payments.map(p => `
+        <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${new Date(p.date).toLocaleDateString()}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(p.amount)}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${p.description || ''}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                <button class="text-red-600 hover:text-red-900 delete-supplier-payment" data-id="${p.id}" data-supplier="${supplierId}">Delete</button>
+            </td>
+        </tr>`).join('');
+
+    tbody.querySelectorAll('.delete-supplier-payment').forEach(btn => btn.addEventListener('click', function() {
+        deleteSupplierPayment(this.getAttribute('data-id'), this.getAttribute('data-supplier'));
+    }));
+}
+
+/**
+ * Handles the click event for adding a supplier payment.
+ * @param {Event} e The click event object.
+ */
+function onAddSupplierPayment(e) {
+    e.preventDefault();
+    const supplierId = document.getElementById('supplierPaymentSelect').value;
+    const amount = parseFloat(document.getElementById('supplierPaymentAmount').value);
+    const date = document.getElementById('supplierPaymentDate').value;
+    const notes = document.getElementById('supplierPaymentNotes').value.trim();
+
+    if (!supplierId) return showToast('Please select a supplier', 'error');
+    if (isNaN(amount) || amount <= 0 || !date) return showToast('Enter a valid amount and date', 'error');
+
+    const newPayment = {
+        id: generateId(),
+        category: 'Supplier Payment',
+        amount,
+        date,
+        description: notes || null,
+        supplierId
+    };
+    saveExpenses([...getExpenses(), newPayment]);
+    showToast('Supplier payment recorded', 'success');
+
+    document.getElementById('supplierPaymentAmount').value = '';
+    document.getElementById('supplierPaymentNotes').value = '';
+    updateSupplierPaymentSummary(supplierId);
+    renderSupplierPaymentHistory(supplierId);
+}
+
+/**
+ * Deletes a supplier payment record.
+ * @param {string} expenseId The ID of the expense record to delete.
+ * @param {string} supplierId The ID of the supplier to update the view for.
+ */
+function deleteSupplierPayment(expenseId, supplierId) {
+    if (!confirm('Delete this payment? This cannot be undone.')) return;
+    saveExpenses(getExpenses().filter(e => e.id !== expenseId));
+    showToast('Payment deleted', 'success');
+    updateSupplierPaymentSummary(supplierId);
+    renderSupplierPaymentHistory(supplierId);
+}
+
+/**
+ * Populates the supplier form for editing.
+ * @param {string} supplierId The ID of the supplier to edit.
+ */
 function editSupplier(supplierId) {
-const suppliers = getSuppliers();
-const supplier = suppliers.find(s => s.id === supplierId);
-
-if (supplier) {
-document.getElementById('supplierId').value = supplier.id;
-document.getElementById('supplierName').value = supplier.name;
-document.getElementById('supplierPhone').value = supplier.phone || '';
-document.getElementById('supplierEmail').value = supplier.email || '';
-document.getElementById('supplierAddress').value = supplier.address || '';
-
-// Scroll to form
-document.getElementById('supplierForm').scrollIntoView({ behavior: 'smooth' });
-}
+    const supplier = getSuppliers().find(s => s.id === supplierId);
+    if (supplier) {
+        document.getElementById('supplierId').value = supplier.id;
+        document.getElementById('supplierName').value = supplier.name;
+        document.getElementById('supplierPhone').value = supplier.phone || '';
+        document.getElementById('supplierEmail').value = supplier.email || '';
+        document.getElementById('supplierAddress').value = supplier.address || '';
+        document.getElementById('supplierForm').scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
+/**
+ * Deletes a supplier after confirmation.
+ * @param {string} supplierId The ID of the supplier to delete.
+ */
 function deleteSupplier(supplierId) {
-if (confirm('Are you sure you want to delete this supplier?')) {
-const suppliers = getSuppliers();
-const updatedSuppliers = suppliers.filter(s => s.id !== supplierId);
-saveSuppliers(updatedSuppliers);
-loadSuppliers();
-showToast('Supplier deleted successfully', 'success');
-}
+    if (confirm('Are you sure you want to delete this supplier?')) {
+        saveSuppliers(getSuppliers().filter(s => s.id !== supplierId));
+        loadSuppliers();
+        showToast('Supplier deleted successfully', 'success');
+    }
 }
 
-// Supplier form submission
-document.getElementById('supplierForm').addEventListener('submit', function(e) {
-e.preventDefault();
-
-const supplierId = document.getElementById('supplierId').value;
-const name = document.getElementById('supplierName').value.trim();
-const phone = document.getElementById('supplierPhone').value.trim();
-const email = document.getElementById('supplierEmail').value.trim();
-const address = document.getElementById('supplierAddress').value.trim();
-
-if (!name) {
-showToast('Supplier name is required', 'error');
-return;
-}
-
-if (email && !isValidEmail(email)) {
-showToast('Please enter a valid email address', 'error');
-return;
-}
-
-if (phone && !isValidPhone(phone)) {
-showToast('Please enter a valid phone number', 'error');
-return;
-}
-
-const suppliers = getSuppliers();
-
-if (supplierId) {
-// Update existing supplier
-const index = suppliers.findIndex(s => s.id === supplierId);
-if (index !== -1) {
-suppliers[index] = {
-...suppliers[index],
-name,
-phone: phone || null,
-email: email || null,
-address: address || null
-};
-saveSuppliers(suppliers);
-loadSuppliers();
-showToast('Supplier updated successfully', 'success');
-resetSupplierForm();
-}
-} else {
-// Add new supplier
-const newSupplier = {
-id: generateId(),
-name,
-phone: phone || null,
-email: email || null,
-address: address || null
-};
-suppliers.push(newSupplier);
-saveSuppliers(suppliers);
-loadSuppliers();
-showToast('Supplier added successfully', 'success');
-resetSupplierForm();
-}
-});
-
+/**
+ * Resets the supplier form.
+ */
 function resetSupplierForm() {
-document.getElementById('supplierForm').reset();
-document.getElementById('supplierId').value = '';
+    document.getElementById('supplierForm').reset();
+    document.getElementById('supplierId').value = '';
 }
-
-document.getElementById('supplierClearBtn').addEventListener('click', resetSupplierForm);
-
-// Supplier search
-document.getElementById('supplierSearchButton').addEventListener('click', function() {
-const searchTerm = document.getElementById('supplierSearch').value.toLowerCase();
-const suppliers = getSuppliers();
-const filteredSuppliers = suppliers.filter(supplier =>
-supplier.name.toLowerCase().includes(searchTerm) ||
-(supplier.phone && supplier.phone.toLowerCase().includes(searchTerm)) ||
-(supplier.email && supplier.email.toLowerCase().includes(searchTerm))
-);
-
-const supplierList = document.getElementById('supplierList');
-if (filteredSuppliers.length === 0) {
-supplierList.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500">No suppliers found</td></tr>';
-return;
-}
-
-supplierList.innerHTML = filteredSuppliers.map(supplier => `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${supplier.name}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${supplier.phone || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${supplier.email || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${supplier.address || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-<button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-supplier" data-id="${supplier.id}">Edit</button>
-<button class="text-red-600 hover:text-red-900 delete-supplier" data-id="${supplier.id}">Delete</button>
-</td>
-</tr>
-`).join('');
-
-// Reattach event listeners
-document.querySelectorAll('.edit-supplier').forEach(button => {
-button.addEventListener('click', function() {
-const supplierId = this.getAttribute('data-id');
-editSupplier(supplierId);
-});
-});
-
-document.querySelectorAll('.delete-supplier').forEach(button => {
-button.addEventListener('click', function() {
-const supplierId = this.getAttribute('data-id');
-deleteSupplier(supplierId);
-});
-});
-});
 
 // ===========================
 // EXPENSES FUNCTIONALITY
 // ===========================
 
+/**
+ * Loads and displays the list of expenses.
+ */
 function loadExpenses() {
-const expenses = getExpenses();
-const expenseList = document.getElementById('expenseList');
+    const expenses = getExpenses();
+    const expenseList = document.getElementById('expenseList');
 
-if (expenses.length === 0) {
-expenseList.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500">No expenses added yet</td></tr>';
-return;
+    if (expenses.length === 0) {
+        expenseList.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500">No expenses added yet</td></tr>';
+        return;
+    }
+
+    expenseList.innerHTML = expenses.map(expense => `
+        <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${expense.category}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(expense.amount)}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(expense.date).toLocaleDateString()}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${expense.description || 'N/A'}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                <button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-expense" data-id="${expense.id}">Edit</button>
+                <button class="text-red-600 hover:text-red-900 delete-expense" data-id="${expense.id}">Delete</button>
+            </td>
+        </tr>`).join('');
+
+    document.querySelectorAll('.edit-expense').forEach(button => button.addEventListener('click', function() { editExpense(this.getAttribute('data-id')); }));
+    document.querySelectorAll('.delete-expense').forEach(button => button.addEventListener('click', function() { deleteExpense(this.getAttribute('data-id')); }));
 }
 
-expenseList.innerHTML = expenses.map(expense => `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${expense.category}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(expense.amount)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(expense.date).toLocaleDateString()}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${expense.description || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-<button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-expense" data-id="${expense.id}">Edit</button>
-<button class="text-red-600 hover:text-red-900 delete-expense" data-id="${expense.id}">Delete</button>
-</td>
-</tr>
-`).join('');
-
-// Add event listeners to edit and delete buttons
-document.querySelectorAll('.edit-expense').forEach(button => {
-button.addEventListener('click', function() {
-const expenseId = this.getAttribute('data-id');
-editExpense(expenseId);
-});
-});
-
-document.querySelectorAll('.delete-expense').forEach(button => {
-button.addEventListener('click', function() {
-const expenseId = this.getAttribute('data-id');
-deleteExpense(expenseId);
-});
-});
-}
-
+/**
+ * Populates the expense form for editing.
+ * @param {string} expenseId The ID of the expense to edit.
+ */
 function editExpense(expenseId) {
-const expenses = getExpenses();
-const expense = expenses.find(e => e.id === expenseId);
-
-if (expense) {
-document.getElementById('expenseId').value = expense.id;
-document.getElementById('expenseCategory').value = expense.category;
-document.getElementById('expenseAmount').value = expense.amount;
-document.getElementById('expenseDate').value = expense.date;
-document.getElementById('expenseDescription').value = expense.description || '';
-
-// Scroll to form
-document.getElementById('expenseForm').scrollIntoView({ behavior: 'smooth' });
-}
+    const expense = getExpenses().find(e => e.id === expenseId);
+    if (expense) {
+        document.getElementById('expenseId').value = expense.id;
+        document.getElementById('expenseCategory').value = expense.category;
+        document.getElementById('expenseAmount').value = expense.amount;
+        document.getElementById('expenseDate').value = expense.date;
+        document.getElementById('expenseDescription').value = expense.description || '';
+        document.getElementById('expenseForm').scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
+/**
+ * Deletes an expense after confirmation.
+ * @param {string} expenseId The ID of the expense to delete.
+ */
 function deleteExpense(expenseId) {
-if (confirm('Are you sure you want to delete this expense?')) {
-const expenses = getExpenses();
-const updatedExpenses = expenses.filter(e => e.id !== expenseId);
-saveExpenses(updatedExpenses);
-loadExpenses();
-showToast('Expense deleted successfully', 'success');
-}
+    if (confirm('Are you sure you want to delete this expense?')) {
+        saveExpenses(getExpenses().filter(e => e.id !== expenseId));
+        loadExpenses();
+        showToast('Expense deleted successfully', 'success');
+    }
 }
 
-// Expense form submission
-document.getElementById('expenseForm').addEventListener('submit', function(e) {
-e.preventDefault();
-
-const expenseId = document.getElementById('expenseId').value;
-const category = document.getElementById('expenseCategory').value;
-const amount = parseFloat(document.getElementById('expenseAmount').value);
-const date = document.getElementById('expenseDate').value;
-const description = document.getElementById('expenseDescription').value.trim();
-
-if (!category || isNaN(amount) || !date) {
-showToast('Please fill in all required fields', 'error');
-return;
-}
-
-if (amount <= 0) {
-showToast('Amount must be greater than 0', 'error');
-return;
-}
-
-const expenses = getExpenses();
-
-if (expenseId) {
-// Update existing expense
-const index = expenses.findIndex(e => e.id === expenseId);
-if (index !== -1) {
-expenses[index] = {
-...expenses[index],
-category,
-amount,
-date,
-description: description || null
-};
-saveExpenses(expenses);
-loadExpenses();
-showToast('Expense updated successfully', 'success');
-resetExpenseForm();
-}
-} else {
-// Add new expense
-const newExpense = {
-id: generateId(),
-category,
-amount,
-date,
-description: description || null
-};
-expenses.push(newExpense);
-saveExpenses(expenses);
-loadExpenses();
-showToast('Expense added successfully', 'success');
-resetExpenseForm();
-}
-});
-
+/**
+ * Resets the expense form.
+ */
 function resetExpenseForm() {
-document.getElementById('expenseForm').reset();
-document.getElementById('expenseId').value = '';
-document.getElementById('expenseDate').value = new Date().toISOString().split('T')[0];
+    document.getElementById('expenseForm').reset();
+    document.getElementById('expenseId').value = '';
+    document.getElementById('expenseDate').value = new Date().toISOString().split('T')[0];
 }
-
-document.getElementById('expenseClearBtn').addEventListener('click', resetExpenseForm);
-
-// Expense search
-document.getElementById('expenseSearchButton').addEventListener('click', function() {
-const searchTerm = document.getElementById('expenseSearch').value.toLowerCase();
-const expenses = getExpenses();
-const filteredExpenses = expenses.filter(expense =>
-expense.category.toLowerCase().includes(searchTerm) ||
-(expense.description && expense.description.toLowerCase().includes(searchTerm))
-);
-
-const expenseList = document.getElementById('expenseList');
-if (filteredExpenses.length === 0) {
-expenseList.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500">No expenses found</td></tr>';
-return;
-}
-
-expenseList.innerHTML = filteredExpenses.map(expense => `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${expense.category}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(expense.amount)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(expense.date).toLocaleDateString()}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${expense.description || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-<button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-expense" data-id="${expense.id}">Edit</button>
-<button class="text-red-600 hover:text-red-900 delete-expense" data-id="${expense.id}">Delete</button>
-</td>
-</tr>
-`).join('');
-
-// Reattach event listeners
-document.querySelectorAll('.edit-expense').forEach(button => {
-button.addEventListener('click', function() {
-const expenseId = this.getAttribute('data-id');
-editExpense(expenseId);
-});
-});
-
-document.querySelectorAll('.delete-expense').forEach(button => {
-button.addEventListener('click', function() {
-const expenseId = this.getAttribute('data-id');
-deleteExpense(expenseId);
-});
-});
-});
 
 // ===========================
 // CUSTOMERS FUNCTIONALITY
 // ===========================
 
+/**
+ * Loads and displays the list of customers.
+ */
 function loadCustomers() {
-const customers = getCustomers();
-const customerList = document.getElementById('customerList');
+    const customers = getCustomers();
+    const customerList = document.getElementById('customerList');
 
-if (customers.length === 0) {
-customerList.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500">No customers added yet</td></tr>';
-return;
+    if (customers.length === 0) {
+        customerList.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500">No customers added yet</td></tr>';
+        return;
+    }
+
+    customerList.innerHTML = customers.map(customer => `
+        <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${customer.name}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${customer.phone || 'N/A'}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${customer.email || 'N/A'}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${customer.address || 'N/A'}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                <button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-customer" data-id="${customer.id}">Edit</button>
+                <button class="text-red-600 hover:text-red-900 delete-customer" data-id="${customer.id}">Delete</button>
+            </td>
+        </tr>`).join('');
+
+    document.querySelectorAll('.edit-customer').forEach(button => button.addEventListener('click', function() { editCustomer(this.getAttribute('data-id')); }));
+    document.querySelectorAll('.delete-customer').forEach(button => button.addEventListener('click', function() { deleteCustomer(this.getAttribute('data-id')); }));
 }
 
-customerList.innerHTML = customers.map(customer => `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${customer.name}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${customer.phone || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${customer.email || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${customer.address || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-<button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-customer" data-id="${customer.id}">Edit</button>
-<button class="text-red-600 hover:text-red-900 delete-customer" data-id="${customer.id}">Delete</button>
-</td>
-</tr>
-`).join('');
-
-// Add event listeners to edit and delete buttons
-document.querySelectorAll('.edit-customer').forEach(button => {
-button.addEventListener('click', function() {
-const customerId = this.getAttribute('data-id');
-editCustomer(customerId);
-});
-});
-
-document.querySelectorAll('.delete-customer').forEach(button => {
-button.addEventListener('click', function() {
-const customerId = this.getAttribute('data-id');
-deleteCustomer(customerId);
-});
-});
-}
-
+/**
+ * Populates the customer form for editing.
+ * @param {string} customerId The ID of the customer to edit.
+ */
 function editCustomer(customerId) {
-const customers = getCustomers();
-const customer = customers.find(c => c.id === customerId);
-
-if (customer) {
-document.getElementById('customerId').value = customer.id;
-document.getElementById('customerName').value = customer.name;
-document.getElementById('customerPhone').value = customer.phone || '';
-document.getElementById('customerEmail').value = customer.email || '';
-document.getElementById('customerAddress').value = customer.address || '';
-
-// Scroll to form
-document.getElementById('customerForm').scrollIntoView({ behavior: 'smooth' });
-}
+    const customer = getCustomers().find(c => c.id === customerId);
+    if (customer) {
+        document.getElementById('customerId').value = customer.id;
+        document.getElementById('customerName').value = customer.name;
+        document.getElementById('customerPhone').value = customer.phone || '';
+        document.getElementById('customerEmail').value = customer.email || '';
+        document.getElementById('customerAddress').value = customer.address || '';
+        document.getElementById('customerForm').scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
+/**
+ * Deletes a customer after confirmation.
+ * @param {string} customerId The ID of the customer to delete.
+ */
 function deleteCustomer(customerId) {
-if (confirm('Are you sure you want to delete this customer?')) {
-const customers = getCustomers();
-const updatedCustomers = customers.filter(c => c.id !== customerId);
-saveCustomers(updatedCustomers);
-loadCustomers();
-showToast('Customer deleted successfully', 'success');
-}
+    if (confirm('Are you sure you want to delete this customer?')) {
+        saveCustomers(getCustomers().filter(c => c.id !== customerId));
+        loadCustomers();
+        showToast('Customer deleted successfully', 'success');
+    }
 }
 
-// Customer form submission
-document.getElementById('customerForm').addEventListener('submit', function(e) {
-e.preventDefault();
-
-const customerId = document.getElementById('customerId').value;
-const name = document.getElementById('customerName').value.trim();
-const phone = document.getElementById('customerPhone').value.trim();
-const email = document.getElementById('customerEmail').value.trim();
-const address = document.getElementById('customerAddress').value.trim();
-
-if (!name) {
-showToast('Customer name is required', 'error');
-return;
-}
-
-if (email && !isValidEmail(email)) {
-showToast('Please enter a valid email address', 'error');
-return;
-}
-
-if (phone && !isValidPhone(phone)) {
-showToast('Please enter a valid phone number', 'error');
-return;
-}
-
-const customers = getCustomers();
-
-if (customerId) {
-// Update existing customer
-const index = customers.findIndex(c => c.id === customerId);
-if (index !== -1) {
-customers[index] = {
-...customers[index],
-name,
-phone: phone || null,
-email: email || null,
-address: address || null
-};
-saveCustomers(customers);
-loadCustomers();
-showToast('Customer updated successfully', 'success');
-resetCustomerForm();
-}
-} else {
-// Add new customer
-const newCustomer = {
-id: generateId(),
-name,
-phone: phone || null,
-email: email || null,
-address: address || null
-};
-customers.push(newCustomer);
-saveCustomers(customers);
-loadCustomers();
-showToast('Customer added successfully', 'success');
-resetCustomerForm();
-}
-});
-
+/**
+ * Resets the customer form.
+ */
 function resetCustomerForm() {
-document.getElementById('customerForm').reset();
-document.getElementById('customerId').value = '';
+    document.getElementById('customerForm').reset();
+    document.getElementById('customerId').value = '';
 }
-
-document.getElementById('customerClearBtn').addEventListener('click', resetCustomerForm);
-
-// Customer search
-document.getElementById('customerSearchButton').addEventListener('click', function() {
-const searchTerm = document.getElementById('customerSearch').value.toLowerCase();
-const customers = getCustomers();
-const filteredCustomers = customers.filter(customer =>
-customer.name.toLowerCase().includes(searchTerm) ||
-(customer.phone && customer.phone.toLowerCase().includes(searchTerm)) ||
-(customer.email && customer.email.toLowerCase().includes(searchTerm))
-);
-
-const customerList = document.getElementById('customerList');
-if (filteredCustomers.length === 0) {
-customerList.innerHTML = '<tr><td colspan="5" class="px-6 py-4 text-center text-sm text-gray-500">No customers found</td></tr>';
-return;
-}
-
-customerList.innerHTML = filteredCustomers.map(customer => `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${customer.name}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${customer.phone || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${customer.email || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${customer.address || 'N/A'}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-<button class="text-indigo-600 hover:text-indigo-900 mr-3 edit-customer" data-id="${customer.id}">Edit</button>
-<button class="text-red-600 hover:text-red-900 delete-customer" data-id="${customer.id}">Delete</button>
-</td>
-</tr>
-`).join('');
-
-// Reattach event listeners
-document.querySelectorAll('.edit-customer').forEach(button => {
-button.addEventListener('click', function() {
-const customerId = this.getAttribute('data-id');
-editCustomer(customerId);
-});
-});
-
-document.querySelectorAll('.delete-customer').forEach(button => {
-button.addEventListener('click', function() {
-const customerId = this.getAttribute('data-id');
-deleteCustomer(customerId);
-});
-});
-});
 
 // ===========================
 // REPORTS FUNCTIONALITY
 // ===========================
 
+/**
+ * Loads and displays quick stats for the reports view.
+ */
 function loadReports() {
-const sales = getSales();
-const products = getProducts();
-const expenses = getExpenses();
+    const sales = getSales();
+    const products = getProducts();
+    const today = new Date().toISOString().split('T')[0];
+    const todaySales = sales.filter(s => s.date === today).reduce((sum, s) => sum + s.total, 0);
+    document.getElementById('todaySales').textContent = formatCurrency(todaySales);
 
-// Update quick stats
-const today = new Date().toISOString().split('T')[0];
-const todaySales = sales.filter(sale => sale.date === today)
-.reduce((sum, sale) => sum + sale.total, 0);
-document.getElementById('todaySales').textContent = formatCurrency(todaySales);
+    const currentMonth = new Date().getMonth();
+    const currentYear = new Date().getFullYear();
+    const monthSales = sales.filter(s => {
+        const saleDate = new Date(s.date);
+        return saleDate.getMonth() === currentMonth && saleDate.getFullYear() === currentYear;
+    }).reduce((sum, s) => sum + s.total, 0);
+    document.getElementById('monthSales').textContent = formatCurrency(monthSales);
 
-const currentMonth = new Date().getMonth();
-const currentYear = new Date().getFullYear();
-const monthSales = sales.filter(sale => {
-const saleDate = new Date(sale.date);
-return saleDate.getMonth() === currentMonth && saleDate.getFullYear() === currentYear;
-}).reduce((sum, sale) => sum + sale.total, 0);
-document.getElementById('monthSales').textContent = formatCurrency(monthSales);
+    const monthProfit = sales.filter(s => {
+        const saleDate = new Date(s.date);
+        return saleDate.getMonth() === currentMonth && saleDate.getFullYear() === currentYear;
+    }).reduce((sum, s) => sum + s.profit, 0);
+    document.getElementById('monthProfit').textContent = formatCurrency(monthProfit);
 
-const monthProfit = sales.filter(sale => {
-const saleDate = new Date(sale.date);
-return saleDate.getMonth() === currentMonth && saleDate.getFullYear() === currentYear;
-}).reduce((sum, sale) => sum + sale.profit, 0);
-document.getElementById('monthProfit').textContent = formatCurrency(monthProfit);
-
-const lowStockCount = products.filter(product => product.stock < 10).length;
-document.getElementById('lowStockCount').textContent = lowStockCount;
+    const lowStockCount = products.filter(p => p.stock < 10).length;
+    document.getElementById('lowStockCount').textContent = lowStockCount;
 }
 
-// Report form submission
-document.getElementById('reportForm').addEventListener('submit', function(e) {
-e.preventDefault();
-
-const reportType = document.getElementById('reportType').value;
-const startDate = document.getElementById('startDate').value;
-const endDate = document.getElementById('endDate').value;
-
-if (!startDate || !endDate) {
-showToast('Please select both start and end dates', 'error');
-return;
-}
-
-if (new Date(startDate) > new Date(endDate)) {
-showToast('Start date cannot be after end date', 'error');
-return;
-}
-
-generateReport(reportType, startDate, endDate);
-});
-
+/**
+ * Generates a report based on the selected type and date range.
+ * @param {string} type The type of report to generate.
+ * @param {string} startDate The start date for the report.
+ * @param {string} endDate The end date for the report.
+ */
 function generateReport(type, startDate, endDate) {
-const sales = getSales();
-const products = getProducts();
-const expenses = getExpenses();
+    const sales = getSales().filter(s => s.date >= startDate && s.date <= endDate);
+    const products = getProducts();
+    const expenses = getExpenses().filter(e => e.date >= startDate && e.date <= endDate);
 
-const filteredSales = sales.filter(sale => {
-const saleDate = new Date(sale.date);
-return saleDate >= new Date(startDate) && saleDate <= new Date(endDate);
-});
-
-const filteredExpenses = expenses.filter(expense => {
-const expenseDate = new Date(expense.date);
-return expenseDate >= new Date(startDate) && expenseDate <= new Date(endDate);
-});
-
-let reportHTML = '';
-
-switch (type) {
-case 'sales':
-reportHTML = generateSalesReport(filteredSales, products);
-break;
-case 'inventory':
-reportHTML = generateInventoryReport(products);
-break;
-case 'profit':
-reportHTML = generateProfitReport(filteredSales, products);
-break;
-case 'expenses':
-reportHTML = generateExpensesReport(filteredExpenses);
-break;
+    let reportHTML = '';
+    switch (type) {
+        case 'sales':
+            reportHTML = generateSalesReport(sales, products);
+            break;
+        case 'inventory':
+            reportHTML = generateInventoryReport(products);
+            break;
+        case 'profit':
+            reportHTML = generateProfitReport(sales, products);
+            break;
+        case 'expenses':
+            reportHTML = generateExpensesReport(expenses);
+            break;
+    }
+    document.getElementById('reportResults').innerHTML = reportHTML;
 }
 
-document.getElementById('reportResults').innerHTML = reportHTML;
-}
-
+/**
+ * Generates the HTML for a sales report.
+ * @param {Array<Object>} sales - The sales data for the report.
+ * @param {Array<Object>} products - The product data for the report.
+ * @returns {string} The HTML string for the report.
+ */
 function generateSalesReport(sales, products) {
-if (sales.length === 0) {
-return '<p class="text-center text-gray-500">No sales data for the selected period</p>';
+    if (sales.length === 0) return '<p class="text-center text-gray-500">No sales data for the selected period</p>';
+
+    const totalSales = sales.reduce((sum, sale) => sum + sale.total, 0);
+    const totalItems = sales.reduce((sum, sale) => sum + sale.items.reduce((itemSum, item) => itemSum + item.quantity, 0), 0);
+
+    let productSales = {};
+    sales.forEach(sale => {
+        sale.items.forEach(item => {
+            if (!productSales[item.productId]) {
+                productSales[item.productId] = { quantity: 0, revenue: 0 };
+            }
+            productSales[item.productId].quantity += item.quantity;
+            productSales[item.productId].revenue += item.total;
+        });
+    });
+
+    const productSalesArray = Object.entries(productSales)
+        .map(([productId, data]) => ({ name: (products.find(p => p.id === productId) || { name: 'Unknown' }).name, ...data }))
+        .sort((a, b) => b.revenue - a.revenue);
+
+    return `
+        <div class="mb-4">
+            <h4 class="text-lg font-semibold">Sales Summary</h4>
+            <p>Total Sales: <strong>${formatCurrency(totalSales)}</strong></p>
+            <p>Total Items Sold: <strong>${totalItems}</strong></p>
+            <p>Number of Transactions: <strong>${sales.length}</strong></p>
+        </div>
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity Sold</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Revenue</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                ${productSalesArray.map(item => `
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.name}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.quantity}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(item.revenue)}</td>
+                    </tr>`).join('')}
+            </tbody>
+        </table>`;
 }
 
-const totalSales = sales.reduce((sum, sale) => sum + sale.total, 0);
-const totalItems = sales.reduce((sum, sale) => sum + sale.items.reduce((itemSum, item) => itemSum + item.quantity, 0), 0);
-
-let productSales = {};
-sales.forEach(sale => {
-sale.items.forEach(item => {
-if (!productSales[item.productId]) {
-productSales[item.productId] = {
-quantity: 0,
-revenue: 0
-};
-}
-productSales[item.productId].quantity += item.quantity;
-productSales[item.productId].revenue += item.total;
-});
-});
-
-const productSalesArray = Object.entries(productSales)
-.map(([productId, data]) => {
-const product = products.find(p => p.id === productId);
-return {
-name: product ? product.name : 'Unknown Product',
-...data
-};
-})
-.sort((a, b) => b.revenue - a.revenue);
-
-return `
-<div class="mb-4">
-<h4 class="text-lg font-semibold">Sales Summary</h4>
-<p>Total Sales: <strong>${formatCurrency(totalSales)}</strong></p>
-<p>Total Items Sold: <strong>${totalItems}</strong></p>
-<p>Number of Transactions: <strong>${sales.length}</strong></p>
-</div>
-<table class="min-w-full divide-y divide-gray-200">
-<thead class="bg-gray-50">
-<tr>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity Sold</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Revenue</th>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-${productSalesArray.map(item => `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.name}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.quantity}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(item.revenue)}</td>
-</tr>
-`).join('')}
-</tbody>
-</table>
-`;
-}
-
+/**
+ * Generates the HTML for an inventory report.
+ * @param {Array<Object>} products - The product data for the report.
+ * @returns {string} The HTML string for the report.
+ */
 function generateInventoryReport(products) {
-if (products.length === 0) {
-return '<p class="text-center text-gray-500">No products in inventory</p>';
+    if (products.length === 0) return '<p class="text-center text-gray-500">No products in inventory</p>';
+
+    const lowStockProducts = products.filter(p => p.stock < 10);
+    const outOfStockProducts = products.filter(p => p.stock === 0);
+    const totalValue = products.reduce((sum, product) => sum + (product.buyingPrice * product.stock), 0);
+
+    return `
+        <div class="mb-4">
+            <h4 class="text-lg font-semibold">Inventory Summary</h4>
+            <p>Total Products: <strong>${products.length}</strong></p>
+            <p>Low Stock Items: <strong>${lowStockProducts.length}</strong></p>
+            <p>Out of Stock Items: <strong>${outOfStockProducts.length}</strong></p>
+            <p>Total Inventory Value: <strong>${formatCurrency(totalValue)}</strong></p>
+        </div>
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Buying Price</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                ${products.map(product => `
+                    <tr class="${product.stock === 0 ? 'bg-red-50' : product.stock < 10 ? 'bg-yellow-50' : ''}">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${product.name}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${product.category}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 ${product.stock === 0 ? 'text-red-600 font-semibold' : product.stock < 10 ? 'text-yellow-600 font-semibold' : ''}">${product.stock}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(product.buyingPrice)}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(product.buyingPrice * product.stock)}</td>
+                    </tr>`).join('')}
+            </tbody>
+        </table>`;
 }
 
-const lowStockProducts = products.filter(p => p.stock < 10);
-const outOfStockProducts = products.filter(p => p.stock === 0);
-const totalValue = products.reduce((sum, product) => sum + (product.buyingPrice * product.stock), 0);
-
-return `
-<div class="mb-4">
-<h4 class="text-lg font-semibold">Inventory Summary</h4>
-<p>Total Products: <strong>${products.length}</strong></p>
-<p>Low Stock Items: <strong>${lowStockProducts.length}</strong></p>
-<p>Out of Stock Items: <strong>${outOfStockProducts.length}</strong></p>
-<p>Total Inventory Value: <strong>${formatCurrency(totalValue)}</strong></p>
-</div>
-<table class="min-w-full divide-y divide-gray-200">
-<thead class="bg-gray-50">
-<tr>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Buying Price</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value</th>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-${products.map(product => `
-<tr class="${product.stock === 0 ? 'bg-red-50' : product.stock < 10 ? 'bg-yellow-50' : ''}">
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${product.name}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${product.category}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 ${product.stock === 0 ? 'text-red-600 font-semibold' : product.stock < 10 ? 'text-yellow-600 font-semibold' : ''}">${product.stock}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(product.buyingPrice)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(product.buyingPrice * product.stock)}</td>
-</tr>
-`).join('')}
-</tbody>
-</table>
-`;
-}
-
+/**
+ * Generates the HTML for a profit report.
+ * @param {Array<Object>} sales - The sales data for the report.
+ * @param {Array<Object>} products - The product data for the report.
+ * @returns {string} The HTML string for the report.
+ */
 function generateProfitReport(sales, products) {
-if (sales.length === 0) {
-return '<p class="text-center text-gray-500">No sales data for the selected period</p>';
+    if (sales.length === 0) return '<p class="text-center text-gray-500">No sales data for the selected period</p>';
+
+    const totalRevenue = sales.reduce((sum, sale) => sum + sale.total, 0);
+    const totalCost = sales.reduce((sum, sale) => {
+        const saleCost = sale.items.reduce((itemSum, item) => {
+            const product = products.find(p => p.id === item.productId);
+            return itemSum + (product ? product.buyingPrice * item.quantity : 0);
+        }, 0);
+        return sum + saleCost;
+    }, 0);
+    const totalProfit = totalRevenue - totalCost;
+    const profitMargin = totalRevenue > 0 ? (totalProfit / totalRevenue) * 100 : 0;
+
+    return `
+        <div class="mb-4">
+            <h4 class="text-lg font-semibold">Profit Summary</h4>
+            <p>Total Revenue: <strong>${formatCurrency(totalRevenue)}</strong></p>
+            <p>Total Cost: <strong>${formatCurrency(totalCost)}</strong></p>
+            <p>Total Profit: <strong>${formatCurrency(totalProfit)}</strong></p>
+            <p>Profit Margin: <strong>${profitMargin.toFixed(2)}%</strong></p>
+        </div>`;
 }
 
-const totalRevenue = sales.reduce((sum, sale) => sum + sale.total, 0);
-const totalCost = sales.reduce((sum, sale) => {
-const saleCost = sale.items.reduce((itemSum, item) => {
-const product = products.find(p => p.id === item.productId);
-return itemSum + (product ? product.buyingPrice * item.quantity : 0);
-}, 0);
-return sum + saleCost;
-}, 0);
-const totalProfit = totalRevenue - totalCost;
-const profitMargin = totalRevenue > 0 ? (totalProfit / totalRevenue) * 100 : 0;
-
-let productProfit = {};
-sales.forEach(sale => {
-sale.items.forEach(item => {
-const product = products.find(p => p.id === item.productId);
-if (product) {
-if (!productProfit[item.productId]) {
-productProfit[item.productId] = {
-revenue: 0,
-cost: 0,
-profit: 0
-};
-}
-productProfit[item.productId].revenue += item.total;
-productProfit[item.productId].cost += product.buyingPrice * item.quantity;
-productProfit[item.productId].profit += item.total - (product.buyingPrice * item.quantity);
-}
-});
-});
-
-const productProfitArray = Object.entries(productProfit)
-.map(([productId, data]) => {
-const product = products.find(p => p.id === productId);
-return {
-name: product ? product.name : 'Unknown Product',
-...data
-};
-})
-.sort((a, b) => b.profit - a.profit);
-
-return `
-<div class="mb-4">
-<h4 class="text-lg font-semibold">Profit Summary</h4>
-<p>Total Revenue: <strong>${formatCurrency(totalRevenue)}</strong></p>
-<p>Total Cost: <strong>${formatCurrency(totalCost)}</strong></p>
-<p>Total Profit: <strong>${formatCurrency(totalProfit)}</strong></p>
-<p>Profit Margin: <strong>${profitMargin.toFixed(2)}%</strong></p>
-</div>
-<table class="min-w-full divide-y divide-gray-200">
-<thead class="bg-gray-50">
-<tr>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Revenue</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Cost</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Profit</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Margin</th>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-${productProfitArray.map(item => {
-const margin = item.revenue > 0 ? (item.profit / item.revenue) * 100 : 0;
-return `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.name}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(item.revenue)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(item.cost)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 ${item.profit < 0 ? 'text-red-600' : 'text-green-600'}">${formatCurrency(item.profit)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 ${margin < 0 ? 'text-red-600' : 'text-green-600'}">${margin.toFixed(2)}%</td>
-</tr>
-`;
-}).join('')}
-</tbody>
-</table>
-`;
-}
-
+/**
+ * Generates the HTML for an expenses report.
+ * @param {Array<Object>} expenses - The expense data for the report.
+ * @returns {string} The HTML string for the report.
+ */
 function generateExpensesReport(expenses) {
-if (expenses.length === 0) {
-return '<p class="text-center text-gray-500">No expenses for the selected period</p>';
+    if (expenses.length === 0) return '<p class="text-center text-gray-500">No expenses for the selected period</p>';
+
+    const totalExpenses = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+    let categoryExpenses = {};
+    expenses.forEach(expense => {
+        categoryExpenses[expense.category] = (categoryExpenses[expense.category] || 0) + expense.amount;
+    });
+    const categoryExpensesArray = Object.entries(categoryExpenses)
+        .map(([category, amount]) => ({ category, amount }))
+        .sort((a, b) => b.amount - a.amount);
+
+    return `
+        <div class="mb-4">
+            <h4 class="text-lg font-semibold">Expenses Summary</h4>
+            <p>Total Expenses: <strong>${formatCurrency(totalExpenses)}</strong></p>
+        </div>
+        <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Percentage</th>
+                </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+                ${categoryExpensesArray.map(item => `
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.category}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(item.amount)}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${((item.amount / totalExpenses) * 100).toFixed(2)}%</td>
+                    </tr>`).join('')}
+            </tbody>
+        </table>`;
 }
-
-const totalExpenses = expenses.reduce((sum, expense) => sum + expense.amount, 0);
-
-let categoryExpenses = {};
-expenses.forEach(expense => {
-if (!categoryExpenses[expense.category]) {
-categoryExpenses[expense.category] = 0;
-}
-categoryExpenses[expense.category] += expense.amount;
-});
-
-const categoryExpensesArray = Object.entries(categoryExpenses)
-.map(([category, amount]) => ({ category, amount }))
-.sort((a, b) => b.amount - a.amount);
-
-return `
-<div class="mb-4">
-<h4 class="text-lg font-semibold">Expenses Summary</h4>
-<p>Total Expenses: <strong>${formatCurrency(totalExpenses)}</strong></p>
-<p>Number of Expenses: <strong>${expenses.length}</strong></p>
-</div>
-<table class="min-w-full divide-y divide-gray-200">
-<thead class="bg-gray-50">
-<tr>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
-<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Percentage</th>
-</tr>
-</thead>
-<tbody class="bg-white divide-y divide-gray-200">
-${categoryExpensesArray.map(item => {
-const percentage = (item.amount / totalExpenses) * 100;
-return `
-<tr>
-<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.category}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatCurrency(item.amount)}</td>
-<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${percentage.toFixed(2)}%</td>
-</tr>
-`;
-}).join('')}
-</tbody>
-</table>
-`;
-}
-
-// Export report to Excel
-document.getElementById('exportReportButton').addEventListener('click', function() {
-const reportResults = document.getElementById('reportResults');
-if (reportResults.innerHTML.includes('text-gray-500')) {
-showToast('No report data to export', 'error');
-return;
-}
-
-// Create a simple CSV export (for demonstration)
-const tables = reportResults.getElementsByTagName('table');
-if (tables.length === 0) {
-showToast('No table data to export', 'error');
-return;
-}
-
-const table = tables[0];
-let csv = [];
-for (let i = 0; i < table.rows.length; i++) {
-let row = [];
-for (let j = 0; j < table.rows[i].cells.length; j++) {
-row.push(table.rows[i].cells[j].textContent);
-}
-csv.push(row.join(','));
-}
-
-const csvContent = 'data:text/csv;charset=utf-8,' + csv.join('\n');
-const encodedUri = encodeURI(csvContent);
-const link = document.createElement('a');
-link.setAttribute('href', encodedUri);
-link.setAttribute('download', 'report.csv');
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-
-showToast('Report exported successfully', 'success');
-});
 
 // ===========================
 // SETTINGS FUNCTIONALITY
 // ===========================
 
-function loadSettings() {
-const companyInfo = getCompanyInfo();
-const systemSettings = getSystemSettings();
+/**
+ * Exports all application data to a single Excel file with multiple sheets.
+ */
+function exportDataToExcel() {
+    try {
+        const products = getProducts();
+        const sales = getSales();
+        const suppliers = getSuppliers();
+        const expenses = getExpenses();
+        const customers = getCustomers();
 
-// Load storage preferences
-const storageTypeInputs = document.querySelectorAll('input[name="storageType"]');
-if (systemSettings.storagePreference && systemSettings.storagePreference.type) {
-    storageTypeInputs.forEach(inp => inp.checked = inp.value === systemSettings.storagePreference.type);
-} else {
-    const localRadio = document.querySelector('input[name="storageType"][value="local"]');
-    if (localRadio) localRadio.checked = true;
+        const wb = XLSX.utils.book_new();
+
+        const productsSheet = XLSX.utils.json_to_sheet(products);
+        XLSX.utils.book_append_sheet(wb, productsSheet, "Products");
+
+        // Flatten sales data for better export, as sales contain nested item arrays
+        const flatSales = sales.flatMap(sale =>
+            (sale.items || []).map(item => ({
+                sale_id: sale.id,
+                sale_date: sale.date,
+                sale_time: sale.time,
+                customer_type: sale.customerType,
+                payment_method: sale.paymentMethod,
+                product_id: item.productId,
+                product_name: item.name,
+                quantity: item.quantity,
+                price_per_item: item.price,
+                item_discount_percent: item.discount,
+                item_total: item.total,
+                order_total: sale.total,
+                order_profit: sale.profit,
+                order_discount_percent: sale.orderDiscount,
+                notes: sale.notes
+            }))
+        );
+        const salesSheet = XLSX.utils.json_to_sheet(flatSales);
+        XLSX.utils.book_append_sheet(wb, salesSheet, "Sales");
+
+        const suppliersSheet = XLSX.utils.json_to_sheet(suppliers);
+        XLSX.utils.book_append_sheet(wb, suppliersSheet, "Suppliers");
+
+        const expensesSheet = XLSX.utils.json_to_sheet(expenses);
+        XLSX.utils.book_append_sheet(wb, expensesSheet, "Expenses");
+
+        const customersSheet = XLSX.utils.json_to_sheet(customers);
+        XLSX.utils.book_append_sheet(wb, customersSheet, "Customers");
+
+        const today = new Date().toISOString().split('T')[0];
+        const defaultName = `SwiftPOS_Backup_${today}.xlsx`;
+
+        if (window.showSaveFilePicker) {
+            const handle = await window.showSaveFilePicker({
+                suggestedName: defaultName,
+                types: [{
+                    description: 'Excel Workbook',
+                    accept: { 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx'] },
+                }],
+            });
+            const writable = await handle.createWritable();
+            const xlsxBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+            await writable.write(xlsxBuffer);
+            await writable.close();
+            showToast('Data exported successfully!', 'success');
+        } else {
+            // Fallback for older browsers
+            XLSX.writeFile(wb, defaultName);
+            showToast('Data exported successfully to Excel!', 'success');
+        }
+    } catch (error) {
+        if (error.name !== 'AbortError') {
+            console.error("Error exporting data:", error);
+            showToast('Failed to export data. See console for details.', 'error');
+        }
+    }
 }
-const storagePath = document.getElementById('storagePath');
-if (storagePath) storagePath.value = systemSettings.storagePreference?.path || '';
 
-// Load company info
-document.getElementById('companyName').value = companyInfo.name || 'Swift POS';
-document.getElementById('companyAddress').value = companyInfo.address || '';
-document.getElementById('companyPhone').value = companyInfo.phone || '';
+/**
+ * Imports data from an Excel file, replacing existing data.
+ * @param {File} file The .xlsx file to import.
+ */
+function importDataFromExcel(file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const data = new Uint8Array(e.target.result);
+            const workbook = XLSX.read(data, {type: 'array'});
 
-// Load system settings
-document.getElementById('currency').value = systemSettings.currency || 'MMK';
-document.getElementById('taxRate').value = systemSettings.taxRate || 0;
-document.getElementById('enableNotifications').checked = systemSettings.enableNotifications !== false;
-document.getElementById('enableSound').checked = systemSettings.enableSound !== false;
-}
+            if (!confirm('This will replace all current data. Are you sure you want to proceed?')) {
+                return;
+            }
 
-// Company form submission
-document.getElementById('companyForm').addEventListener('submit', function(e) {
-e.preventDefault();
+            const products = XLSX.utils.sheet_to_json(workbook.Sheets['Products'] || {});
+            const salesRaw = XLSX.utils.sheet_to_json(workbook.Sheets['Sales'] || {});
+            const suppliers = XLSX.utils.sheet_to_json(workbook.Sheets['Suppliers'] || {});
+            const expenses = XLSX.utils.sheet_to_json(workbook.Sheets['Expenses'] || {});
+            const customers = XLSX.utils.sheet_to_json(workbook.Sheets['Customers'] || {});
 
-const name = document.getElementById('companyName').value.trim();
-const address = document.getElementById('companyAddress').value.trim();
-const phone = document.getElementById('companyPhone').value.trim();
-const logoFile = document.getElementById('companyLogo').files[0];
+            // Reconstruct sales from flat structure
+            const sales = Object.values(salesRaw.reduce((acc, row) => {
+                if (!acc[row.sale_id]) {
+                    acc[row.sale_id] = {
+                        id: row.sale_id,
+                        date: row.sale_date,
+                        time: row.sale_time,
+                        customerType: row.customer_type,
+                        paymentMethod: row.payment_method,
+                        total: row.order_total,
+                        profit: row.order_profit,
+                        orderDiscount: row.order_discount_percent,
+                        notes: row.notes,
+                        items: []
+                    };
+                }
+                acc[row.sale_id].items.push({
+                    productId: row.product_id,
+                    name: row.product_name,
+                    quantity: row.quantity,
+                    price: row.price_per_item,
+                    discount: row.item_discount_percent,
+                    total: row.item_total
+                });
+                return acc;
+            }, {}));
 
-if (!name) {
-showToast('Company name is required', 'error');
-return;
-}
+            saveProducts(products);
+            saveSales(sales);
+            saveSuppliers(suppliers);
+            saveExpenses(expenses);
+            saveCustomers(customers);
 
-const companyInfo = {
-name,
-address: address || null,
-phone: phone || null,
-logo: getCompanyInfo().logo || null
-};
-
-if (logoFile) {
-const reader = new FileReader();
-reader.onload = function(e) {
-companyInfo.logo = e.target.result;
-saveCompanyInfo(companyInfo);
-showToast('Company information saved successfully', 'success');
-};
-reader.readAsDataURL(logoFile);
-} else {
-saveCompanyInfo(companyInfo);
-showToast('Company information saved successfully', 'success');
-}
-});
-
-// System settings form submission
-document.getElementById('systemForm').addEventListener('submit', function(e) {
-e.preventDefault();
-
-const currency = document.getElementById('currency').value;
-const taxRate = parseFloat(document.getElementById('taxRate').value);
-const enableNotifications = document.getElementById('enableNotifications').checked;
-const enableSound = document.getElementById('enableSound').checked;
-
-if (isNaN(taxRate) || taxRate < 0 || taxRate > 100) {
-showToast('Tax rate must be between 0 and 100', 'error');
-return;
-}
-
-const existing = getSystemSettings();
-const systemSettings = {
- currency,
- taxRate,
- enableNotifications,
- enableSound,
- storagePreference: existing.storagePreference || { type: 'local', path: '' }
-};
-
-saveSystemSettings(systemSettings);
-showToast('System settings saved successfully', 'success');
-});
-
-// Data management
-document.getElementById('exportDataButton').addEventListener('click', function() {
-const data = {
-products: getProducts(),
-sales: getSales(),
-suppliers: getSuppliers(),
-expenses: getExpenses(),
-customers: getCustomers(),
-companyInfo: getCompanyInfo(),
-systemSettings: getSystemSettings(),
-exportDate: new Date().toISOString()
-};
-
-const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data, null, 2));
-const downloadAnchorNode = document.createElement('a');
-downloadAnchorNode.setAttribute('href', dataStr);
-downloadAnchorNode.setAttribute('download', 'swift-pos-backup.json');
-document.body.appendChild(downloadAnchorNode);
-downloadAnchorNode.click();
-downloadAnchorNode.remove();
-
-showToast('Data exported successfully', 'success');
-});
-
-document.getElementById('importDataButton').addEventListener('click', function() {
-const input = document.createElement('input');
-input.type = 'file';
-input.accept = '.json';
-input.onchange = function(e) {
-const file = e.target.files[0];
-if (!file) return;
-
-const reader = new FileReader();
-reader.onload = function(e) {
-try {
-const data = JSON.parse(e.target.result);
-
-if (confirm('This will replace all current data. Are you sure?')) {
-if (data.products) saveProducts(data.products);
-if (data.sales) saveSales(data.sales);
-if (data.suppliers) saveSuppliers(data.suppliers);
-if (data.expenses) saveExpenses(data.expenses);
-if (data.customers) saveCustomers(data.customers);
-if (data.companyInfo) saveCompanyInfo(data.companyInfo);
-if (data.systemSettings) saveSystemSettings(data.systemSettings);
-
-showToast('Data imported successfully', 'success');
-
-// Reload current view
-const currentView = Object.keys(views).find(key => !views[key].classList.contains('hidden'));
-if (currentView) {
-showView(currentView);
-}
-}
-} catch (error) {
-showToast('Invalid data file', 'error');
-console.error('Import error:', error);
-}
-};
-reader.readAsText(file);
-};
-input.click();
-});
-
-// Storage preferences form submission
-document.getElementById('storageForm').addEventListener('submit', function(e) {
-e.preventDefault();
-const selectedType = (document.querySelector('input[name="storageType"]:checked') || {}).value || 'local';
-const path = document.getElementById('storagePath').value.trim();
-const settings = getSystemSettings();
-settings.storagePreference = { type: selectedType, path };
-saveSystemSettings(settings);
-showToast('Storage preference saved', 'success');
-});
-
-// Choose local folder (limited support in browsers; uses directory file input as a fallback)
-const pickBtn = document.getElementById('pickLocalFolderButton');
-if (pickBtn) {
-pickBtn.addEventListener('click', function() {
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.webkitdirectory = true;
-    input.directory = true;
-    input.onchange = function(e) {
-        const files = Array.from(e.target.files || []);
-        if (files.length > 0) {
-            // Derive a pseudo-folder path from first file
-            const first = files[0];
-            const pathGuess = (first.webkitRelativePath || '').split('/').slice(0, -1).join('/');
-            const current = getSystemSettings();
-            current.storagePreference = { type: 'local', path: pathGuess };
-            saveSystemSettings(current);
-            const storagePathEl = document.getElementById('storagePath');
-            if (storagePathEl) storagePathEl.value = pathGuess;
-            const localRadio = document.querySelector('input[name="storageType"][value="local"]');
-            if (localRadio) localRadio.checked = true;
-            showToast('Folder selected', 'success');
+            showToast('Data imported successfully!', 'success');
+            // Refresh the whole application state
+            showView('dashboard');
+        } catch (error) {
+            console.error("Error importing data from Excel:", error);
+            showToast('Failed to import data. File might be corrupt or in the wrong format.', 'error');
         }
     };
-    input.click();
-});
+    reader.readAsArrayBuffer(file);
 }
 
-document.getElementById('resetDataButton').addEventListener('click', function() {
-if (confirm('This will delete all data and cannot be undone. Are you sure?')) {
-localStorage.clear();
-initializeData();
-showToast('Data reset successfully', 'success');
-showView('dashboard');
+/**
+ * Loads company and system settings into the settings form.
+ */
+function loadSettings() {
+    const companyInfo = getCompanyInfo();
+    const systemSettings = getSystemSettings();
+
+    document.getElementById('companyName').value = companyInfo.name || 'Swift POS';
+    document.getElementById('companyAddress').value = companyInfo.address || '';
+    document.getElementById('companyPhone').value = companyInfo.phone || '';
+
+    document.getElementById('currency').value = systemSettings.currency || 'MMK';
+    document.getElementById('taxRate').value = systemSettings.taxRate || 0;
+    document.getElementById('enableNotifications').checked = systemSettings.enableNotifications !== false;
+    document.getElementById('enableSound').checked = systemSettings.enableSound !== false;
+
+    const storagePref = systemSettings.storagePreference || { type: 'local', path: '' };
+    document.querySelector(`input[name="storageType"][value="${storagePref.type}"]`).checked = true;
+    document.getElementById('storagePath').value = storagePref.path || '';
 }
-});
 
 // ===========================
 // EVENT LISTENERS
 // ===========================
 
-// Tab navigation
-Object.entries(tabButtons).forEach(([viewName, button]) => {
-button.addEventListener('click', () => showView(viewName));
+/**
+ * Handles submission of the product form to add or update a product.
+ * @param {Event} e The form submission event.
+ */
+document.getElementById('productForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const products = getProducts();
+    const productId = document.getElementById('productId').value;
+    const name = document.getElementById('productName').value.trim();
+    if (!name) return showToast('Product name is required', 'error');
+
+    const newProduct = {
+        id: productId || generateId(),
+        name: name,
+        category: document.getElementById('productCategory').value,
+        stock: parseInt(document.getElementById('productStock').value, 10),
+        buyingPrice: parseFloat(document.getElementById('productBuyingPrice').value),
+        sellingPrice: parseFloat(document.getElementById('productSellingPrice').value),
+        size: document.getElementById('productSize').value.trim(),
+        color: document.getElementById('productColor').value.trim(),
+        supplierId: document.getElementById('productSupplier').value,
+        barcode: document.getElementById('productBarcode').value.trim(),
+        image: '' // Image handling needs to be implemented separately
+    };
+
+    if (productId) {
+        const index = products.findIndex(p => p.id === productId);
+        products[index] = newProduct;
+    } else {
+        products.push(newProduct);
+    }
+    saveProducts(products);
+    loadProducts();
+    resetProductForm();
+    showToast('Product saved successfully', 'success');
 });
 
-// Mobile navigation
-mobileNavSelect.addEventListener('change', function() {
-showView(this.value);
+/**
+ * Handles submission of the supplier form to add or update a supplier.
+ * @param {Event} e The form submission event.
+ */
+document.getElementById('supplierForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const suppliers = getSuppliers();
+    const supplierId = document.getElementById('supplierId').value;
+    const name = document.getElementById('supplierName').value.trim();
+    if (!name) return showToast('Supplier name is required', 'error');
+
+    const newSupplier = {
+        id: supplierId || generateId(),
+        name: name,
+        phone: document.getElementById('supplierPhone').value.trim(),
+        email: document.getElementById('supplierEmail').value.trim(),
+        address: document.getElementById('supplierAddress').value.trim()
+    };
+
+    if (supplierId) {
+        const index = suppliers.findIndex(s => s.id === supplierId);
+        suppliers[index] = newSupplier;
+    } else {
+        suppliers.push(newSupplier);
+    }
+    saveSuppliers(suppliers);
+    loadSuppliers();
+    resetSupplierForm();
+    showToast('Supplier saved successfully', 'success');
 });
 
-// Mobile menu
-mobileMenuButton.addEventListener('click', function() {
-sidebar.classList.add('open');
-overlay.classList.add('open');
+/**
+ * Handles submission of the expense form to add or update an expense.
+ * @param {Event} e The form submission event.
+ */
+document.getElementById('expenseForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const expenses = getExpenses();
+    const expenseId = document.getElementById('expenseId').value;
+    const newExpense = {
+        id: expenseId || generateId(),
+        category: document.getElementById('expenseCategory').value,
+        amount: parseFloat(document.getElementById('expenseAmount').value),
+        date: document.getElementById('expenseDate').value,
+        description: document.getElementById('expenseDescription').value.trim()
+    };
+    if (!newExpense.category || !newExpense.amount || !newExpense.date) {
+        return showToast('Category, amount, and date are required', 'error');
+    }
+
+    if (expenseId) {
+        const index = expenses.findIndex(ex => ex.id === expenseId);
+        expenses[index] = newExpense;
+    } else {
+        expenses.push(newExpense);
+    }
+    saveExpenses(expenses);
+    loadExpenses();
+    resetExpenseForm();
+    showToast('Expense saved successfully', 'success');
 });
 
-closeSidebar.addEventListener('click', function() {
-sidebar.classList.remove('open');
-overlay.classList.remove('open');
+/**
+ * Handles submission of the customer form to add or update a customer.
+ * @param {Event} e The form submission event.
+ */
+document.getElementById('customerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const customers = getCustomers();
+    const customerId = document.getElementById('customerId').value;
+    const name = document.getElementById('customerName').value.trim();
+    if (!name) return showToast('Customer name is required', 'error');
+
+    const newCustomer = {
+        id: customerId || generateId(),
+        name: name,
+        phone: document.getElementById('customerPhone').value.trim(),
+        email: document.getElementById('customerEmail').value.trim(),
+        address: document.getElementById('customerAddress').value.trim()
+    };
+
+    if (customerId) {
+        const index = customers.findIndex(c => c.id === customerId);
+        customers[index] = newCustomer;
+    } else {
+        customers.push(newCustomer);
+    }
+    saveCustomers(customers);
+    loadCustomers();
+    resetCustomerForm();
+    showToast('Customer saved successfully', 'success');
 });
 
-overlay.addEventListener('click', function() {
-sidebar.classList.remove('open');
-this.classList.remove('open');
+/**
+ * Handles submission of the report form to generate a new report.
+ * @param {Event} e The form submission event.
+ */
+document.getElementById('reportForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const reportType = document.getElementById('reportType').value;
+    const startDate = document.getElementById('startDate').value;
+    const endDate = document.getElementById('endDate').value;
+    if (!startDate || !endDate) return showToast('Please select both start and end dates', 'error');
+    if (new Date(startDate) > new Date(endDate)) return showToast('Start date cannot be after end date', 'error');
+    generateReport(reportType, startDate, endDate);
 });
 
-// Mobile sidebar navigation
-document.getElementById('mobileDashboardTab').addEventListener('click', () => showView('dashboard'));
-document.getElementById('mobileProductsTab').addEventListener('click', () => showView('products'));
-document.getElementById('mobileSalesTab').addEventListener('click', () => showView('sales'));
-document.getElementById('mobileSuppliersTab').addEventListener('click', () => showView('suppliers'));
-document.getElementById('mobileExpensesTab').addEventListener('click', () => showView('expenses'));
-document.getElementById('mobileCustomersTab').addEventListener('click', () => showView('customers'));
-document.getElementById('mobileReportsTab').addEventListener('click', () => showView('reports'));
-document.getElementById('mobileSettingsTab').addEventListener('click', () => showView('settings'));
+/**
+ * Handles submission of the company info form.
+ * @param {Event} e The form submission event.
+ */
+document.getElementById('companyForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const info = {
+        name: document.getElementById('companyName').value.trim(),
+        address: document.getElementById('companyAddress').value.trim(),
+        phone: document.getElementById('companyPhone').value.trim(),
+        logo: getCompanyInfo().logo // Logo saving needs separate logic
+    };
+    saveCompanyInfo(info);
+    showToast('Company information saved', 'success');
+    loadDashboardData(); // Refresh dashboard with new name/logo
+});
 
-// Initialize the app
+/**
+ * Handles submission of the system settings form.
+ * @param {Event} e The form submission event.
+ */
+document.getElementById('systemForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const settings = {
+        currency: document.getElementById('currency').value,
+        taxRate: parseFloat(document.getElementById('taxRate').value),
+        enableNotifications: document.getElementById('enableNotifications').checked,
+        enableSound: document.getElementById('enableSound').checked,
+        storagePreference: getSystemSettings().storagePreference
+    };
+    saveSystemSettings(settings);
+    showToast('System settings saved', 'success');
+});
+
+/**
+ * Handles submission of the storage preferences form.
+ * @param {Event} e The form submission event.
+ */
+document.getElementById('storageForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const settings = getSystemSettings();
+    settings.storagePreference = {
+        type: document.querySelector('input[name="storageType"]:checked').value,
+        path: document.getElementById('storagePath').value.trim()
+    };
+    saveSystemSettings(settings);
+    showToast('Storage preference saved', 'success');
+});
+
+// Button Clicks
+document.getElementById('productClearBtn').addEventListener('click', resetProductForm);
+document.getElementById('supplierClearBtn').addEventListener('click', resetSupplierForm);
+document.getElementById('expenseClearBtn').addEventListener('click', resetExpenseForm);
+document.getElementById('customerClearBtn').addEventListener('click', resetCustomerForm);
+document.getElementById('clearCartButton').addEventListener('click', clearCart);
+document.getElementById('completeSaleButton').addEventListener('click', completeSale);
+document.getElementById('printReceiptButton').addEventListener('click', printReceipt);
+document.getElementById('exportDataButton').addEventListener('click', exportDataToExcel);
+
+/**
+ * Handles the click event for the 'Import Data' button.
+ * Creates a file input element to allow the user to select an Excel file for import.
+ */
+document.getElementById('importDataButton').addEventListener('click', () => {
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.xlsx';
+    fileInput.onchange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            importDataFromExcel(file);
+        }
+    };
+    fileInput.click();
+});
+
+/**
+ * Handles the click event for the 'Reset Data' button.
+ * Prompts the user for confirmation and resets all application data.
+ */
+document.getElementById('resetDataButton').addEventListener('click', () => {
+    if (confirm('Are you sure you want to reset all data? This action cannot be undone.')) {
+        localStorage.clear();
+        initializeData();
+        showView('dashboard');
+        showToast('All data has been reset.', 'success');
+    }
+});
+
+/**
+ * Handles the click event for the 'Choose Folder' button for local storage preferences.
+ * (Note: Actual folder picking is not possible due to browser security restrictions.
+ * This is a placeholder for future enhancements, e.g., with Electron.)
+ */
+document.getElementById('pickLocalFolderButton').addEventListener('click', () => {
+    showToast('Direct folder access is not supported in web browsers.', 'info');
+});
+
+// Tab and mobile navigation
+Object.entries(tabButtons).forEach(([viewName, button]) => button.addEventListener('click', () => showView(viewName)));
+mobileNavSelect.addEventListener('change', (e) => showView(e.target.value));
+
+/**
+ * Handles the click event for the mobile menu button to open the sidebar.
+ */
+mobileMenuButton.addEventListener('click', () => {
+    sidebar.classList.add('open');
+    overlay.classList.add('open');
+});
+
+/**
+ * Handles the click event for the close sidebar button.
+ */
+closeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('open');
+});
+
+/**
+ * Handles the click event for the overlay to close the sidebar.
+ */
+overlay.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('open');
+});
+
+/**
+ * Initializes the application when the DOM is fully loaded.
+ * Sets up initial data, views, and event listeners.
+ */
 document.addEventListener('DOMContentLoaded', function() {
-initializeData();
-showView('dashboard');
+    initializeData();
+    showView('dashboard');
+    // Set default dates
+    document.getElementById('expenseDate').value = new Date().toISOString().split('T')[0];
+    const today = new Date();
+    const firstDay = new Date(today.getFullYear(), today.getMonth(), 1).toISOString().split('T')[0];
+    const lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0).toISOString().split('T')[0];
+    document.getElementById('startDate').value = firstDay;
+    document.getElementById('endDate').value = lastDay;
 
-// Set current date for expense form
-document.getElementById('expenseDate').value = new Date().toISOString().split('T')[0];
+    // Language and translation logic
+    const translations = {
+        en: {
+            dashboard: 'Dashboard',
+            products: 'Products',
+            sales: 'Sales',
+            suppliers: 'Suppliers',
+            expenses: 'Expenses',
+            customers: 'Customers',
+            reports: 'Reports',
+            settings: 'Settings',
+            // Add more translations as needed
+        },
+        my: {
+            dashboard: 'ဒိုင်ခွက်',
+            products: 'ကုန်ပစ္စည်းများ',
+            sales: 'အရောင်း',
+            suppliers: 'ကုန်သွင်းသူများ',
+            expenses: 'ကုန်ကျစရိတ်',
+            customers: 'သုံးစွဲသူများ',
+            reports: 'အစီရင်ခံစာများ',
+            settings: 'ဆက်တင်များ',
+            // Add more translations as needed
+        }
+    };
 
-// Set default dates for reports (current month)
-const today = new Date();
-const firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
-const lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+    function applyTranslations(lang) {
+        document.querySelectorAll('[data-lang-key]').forEach(el => {
+            const key = el.getAttribute('data-lang-key');
+            if (translations[lang] && translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
+        });
+    }
 
-document.getElementById('startDate').value = firstDay.toISOString().split('T')[0];
-document.getElementById('endDate').value = lastDay.toISOString().split('T')[0];
+    function setLanguage(lang) {
+        const settings = getSystemSettings();
+        settings.language = lang;
+        saveSystemSettings(settings);
+        applyTranslations(lang);
+    }
 
-// Check online/offline status
-window.addEventListener('online', function() {
-document.getElementById('offlineIndicator').classList.add('hidden');
-showToast('Connection restored', 'success');
-});
+    document.getElementById('language').addEventListener('change', (e) => {
+        setLanguage(e.target.value);
+    });
 
-window.addEventListener('offline', function() {
-document.getElementById('offlineIndicator').classList.remove('hidden');
-showToast('You are currently offline', 'warning');
-});
+    const savedLanguage = getSystemSettings().language || 'en';
+    document.getElementById('language').value = savedLanguage;
+    applyTranslations(savedLanguage);
 
-// Initialize offline indicator
-if (!navigator.onLine) {
-document.getElementById('offlineIndicator').classList.remove('hidden');
-}
-});
+    // Online/Offline status
+    window.addEventListener('online', () => document.getElementById('offlineIndicator').classList.add('hidden'));
+    window.addEventListener('offline', () => document.getElementById('offlineIndicator').classList.remove('hidden'));
+    if (!navigator.onLine) document.getElementById('offlineIndicator').classList.remove('hidden');
 
-// Keyboard shortcuts
-document.addEventListener('keydown', function(e) {
-// Ctrl/Cmd + number shortcuts for tabs
-if ((e.ctrlKey || e.metaKey) && e.key >= '1' && e.key <= '8') {
-const tabIndex = parseInt(e.key) - 1;
-const tabNames = ['dashboard', 'products', 'sales', 'suppliers', 'expenses', 'customers', 'reports', 'settings'];
-if (tabIndex < tabNames.length) {
-e.preventDefault();
-showView(tabNames[tabIndex]);
-}
-}
+    // PWA Installation Prompt
+    let deferredPrompt;
+    const installButton = document.getElementById('installButton');
 
-// Escape key to close mobile menu
-if (e.key === 'Escape') {
-sidebar.classList.remove('open');
-overlay.classList.remove('open');
-}
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the mini-infobar from appearing on mobile
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+        // Update UI to notify the user they can install the PWA
+        installButton.classList.remove('hidden');
+
+        installButton.addEventListener('click', () => {
+            // Hide the app provided install promotion
+            installButton.classList.add('hidden');
+            // Show the install prompt
+            deferredPrompt.prompt();
+            // Wait for the user to respond to the prompt
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the install prompt');
+                } else {
+                    console.log('User dismissed the install prompt');
+                }
+                deferredPrompt = null;
+            });
+        });
+    });
+
+    window.addEventListener('appinstalled', () => {
+        // Hide the install button if the app is installed
+        installButton.classList.add('hidden');
+        deferredPrompt = null;
+        console.log('PWA was installed');
+    });
 });
 </script>
 </body>
